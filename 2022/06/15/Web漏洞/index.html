@@ -190,7 +190,7 @@
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220725164712357.png">
 <meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220725164722476.png">
 <meta property="article:published_time" content="2022-06-15T10:20:52.000Z">
-<meta property="article:modified_time" content="2022-07-26T09:54:08.095Z">
+<meta property="article:modified_time" content="2022-07-27T07:15:36.837Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220504203524324.png">
@@ -1187,10 +1187,10 @@
 <p>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗,如果主要考虑到安全应当使用session。</p>
 <p>cookie在客户端的限制是3K。</p>
 <p>session保存在服务端会占用性能，如果主要考虑到减轻服务器性能方面，应当使用COOKIE。</p>
-<h3 id="5-2-跨域请求"><a href="#5-2-跨域请求" class="headerlink" title="5.2 跨域请求"></a>5.2 跨域请求</h3><h4 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h4><p>同源策略限制了不同源之间如何进行资源交互，是用于隔离潜在恶意文件的重要安全机制。 是否同源由URL决定，URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。此策略可防止某个网页上的恶意脚本通过该页面的文档对象模型（DOM）访问另一网页上的敏感数据。</p>
+<h3 id="5-2-跨域请求"><a href="#5-2-跨域请求" class="headerlink" title="5.2 跨域请求"></a>5.2 跨域请求</h3><h4 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h4><p>同源策略限制了不同源之间如何进行资源交互，是用于隔离潜在恶意文件的重要安全机制。 是否同源由URL决定，URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。此策略可防止某个网页上的恶意脚本通过该页面的文档对象模型（DOM）访问另一网页上的敏感数据。同源策略是由浏览器来执行的安全策略。</p>
 <p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509160657254.png" alt="image-20220509160657254"></p>
 <p><strong>file同源：</strong>域名或IP地址、子域名、端口、协议。</p>
-<p><strong>Cookie同源：</strong>不管使用哪个协议(HTTP/HTTPS)或端口号，浏览器都允许给定的域以及其任何子域名访问cookie。设置 cookie时，可以使用 domain / path / secure 和 http-only 标记来限定其访问性。所以 <a target="_blank" rel="noopener" href="https://localhost:8080/">https://localhost:8080/</a> 和 <a target="_blank" rel="noopener" href="http://localhost:8081/">http://localhost:8081/</a> 的Cookie是共享的。</p>
+<p><strong>Cookie同源：</strong>不管使用<strong>哪个协议(HTTP/HTTPS)<strong>或</strong>端口号</strong>，浏览器都允许给定的域以及其任何子域名访问cookie。设置 cookie时，可以使用 domain / path / secure 和 http-only 标记来限定其访问性。所以 <a target="_blank" rel="noopener" href="https://localhost:8080/">https://localhost:8080/</a> 和 <a target="_blank" rel="noopener" href="http://localhost:8081/">http://localhost:8081/</a> 的Cookie是共享的。</p>
 <p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509160702020.png" alt="image-20220509160702020"></p>
 <h4 id="跨域访问："><a href="#跨域访问：" class="headerlink" title="跨域访问："></a>跨域访问：</h4><p><strong>可跨域标签：</strong></p>
 <table>
@@ -1232,23 +1232,23 @@
 <td>引入的字体</td>
 </tr>
 </tbody></table>
-<p><strong>所有具有src属性的HTML标签都是可以跨域的。</strong></p>
+<p><strong>所有具有src、href属性的HTML标签都是可以跨域的。</strong></p>
 <p><strong>其他跨域方法：</strong></p>
-<p>1.<strong>JSONP</strong>利用<strong>&lt;script&gt;可以跨域</strong>的原理，而且在跨域脚本中可以直接回调当前脚本的函数。</p>
+<p>1.<strong>JSONP <strong>利用</strong>&lt;script&gt;可以跨域</strong>的原理，而且在跨域脚本中可以直接回调当前脚本的函数。</p>
 <p>2.CORS 服务器设置<strong>Access-Control-Allow-Origin HTTP响应头</strong>之后，浏览器将会允许跨域请求。</p>
 <p>3.document.domain 相同主域名<strong>不同子域名</strong>下的页面，可以设置document.domain让它们同域。</p>
 <p>4.window.name 一个窗口载入的所有页面公用一个window.name，且window.name持久存在。</p>
 <p>5.window.postMesage 通过监听message事件来监听信息，可跨主域名。</p>
 <h4 id="JSONP跨域："><a href="#JSONP跨域：" class="headerlink" title="JSONP跨域："></a>JSONP跨域：</h4><p><strong>JSON：</strong></p>
-<p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。</p>
+<p>JSON(JavaScript Object Notation)是一种轻量级的<strong>数据交换格式</strong>。</p>
 <p>JSON是一个标记符的序列。这套标记符包含六个构造字符、字符串、数字和三个字面名。</p>
-<p>JSON是一个序列化的对象或数组。</p>
+<p>JSON是一个<strong>序列化的对象或数组</strong>。</p>
 <p><a target="_blank" rel="noopener" href="http://10.211.55.2/lesson/xss/json.php">http://10.211.55.2/lesson/xss/json.php</a></p>
 <p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161431008.png" alt="image-20220509161431008"></p>
 <p><strong>JSONP：</strong></p>
 <p>JSONP 是 JSON with padding（填充式 JSON 或参数式 JSON）的简写，它携带了json信息与回调函数名。</p>
-<p>JSONP实现跨域请求的原理简单的说，就是动态创建&lt;script&gt;标签，然后利用&lt;script&gt;的src 不受同源策略约束来跨域获取数据。</p>
-<p>JSONP 由两部分组成：回调函数和数据。回调函数是当响应到来时应该在页面中调用的函数。回调函数的名字一般是在请求中指定的。而数据就是传入回调函数中的 JSON 数据。</p>
+<p>JSONP实现跨域请求的原理简单的说，就是动态创建&lt;script&gt;标签，然后利用&lt;script&gt;的src不受同源策略约束来跨域获取数据。</p>
+<p>JSONP 由两部分组成：<strong>回调函数和数据</strong>。回调函数是当响应到来时应该在页面中调用的函数。回调函数的名字一般是在请求中指定的。而数据就是传入回调函数中的 JSON 数据。</p>
 <p><a target="_blank" rel="noopener" href="http://10.211.55.2/lesson/xss/jsonp.php">http://10.211.55.2/lesson/xss/jsonp.php</a></p>
 <p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220509161501438.png" alt="image-20220509161501438"></p>
 <h3 id="5-3-XSS攻击"><a href="#5-3-XSS攻击" class="headerlink" title="5.3 XSS攻击"></a>5.3 XSS攻击</h3><h4 id="反射型XSS："><a href="#反射型XSS：" class="headerlink" title="反射型XSS："></a>反射型XSS：</h4><p>•主要用于将恶意脚本附加到请求参数中。</p>
@@ -1982,6 +1982,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
