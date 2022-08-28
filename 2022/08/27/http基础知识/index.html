@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>http基础知识 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="HTTP协议解析HTTP协议即超文本传输协议，是一种详细规定了浏览器和万维网服务器之间互相通信的规则，它是万维网交换信息的基础，它允许将HTML文档从WEB服务器传输到WEB浏览器。(应用层的协议) HTTP请求URL(统一资源定位符)也被称为网页地址，是互联网标准的地址。 标准格式：协议:&#x2F;&#x2F;服务器IP[:端口]&#x2F;路径&#x2F;[?查询] 浏览器可以发起HTTP请求，也可以借助其他工具发起HTTP请求，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http基础知识">
+<meta property="og:url" content="http://example.com/2022/08/27/http%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTTP协议解析HTTP协议即超文本传输协议，是一种详细规定了浏览器和万维网服务器之间互相通信的规则，它是万维网交换信息的基础，它允许将HTML文档从WEB服务器传输到WEB浏览器。(应用层的协议) HTTP请求URL(统一资源定位符)也被称为网页地址，是互联网标准的地址。 标准格式：协议:&#x2F;&#x2F;服务器IP[:端口]&#x2F;路径&#x2F;[?查询] 浏览器可以发起HTTP请求，也可以借助其他工具发起HTTP请求，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220826180213817.png">
+<meta property="article:published_time" content="2022-08-27T08:27:36.000Z">
+<meta property="article:modified_time" content="2022-08-28T04:07:16.900Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="安全知识">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220826180213817.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,36 +157,204 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-http基础知识" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      http基础知识
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/27/http%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+
+        
+        <a href="/2022/08/27/http%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
   	<time datetime="2022-08-27T08:27:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-27</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/27/http%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">http基础知识</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTTP协议解析"><a href="#HTTP协议解析" class="headerlink" title="HTTP协议解析"></a>HTTP协议解析</h3><p>HTTP协议即超文本传输协议，是一种详细规定了浏览器和万维网服务器之间互相通信的规则，它是万维网交换信息的基础，它允许将HTML文档从WEB服务器传输到WEB浏览器。(应用层的协议)</p>
+<h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><p>URL(统一资源定位符)也被称为网页地址，是互联网标准的地址。</p>
+<p><code>标准格式：协议://服务器IP[:端口]/路径/[?查询]</code></p>
+<p>浏览器可以发起HTTP请求，也可以借助其他工具发起HTTP请求，例如，linux系统的curl命令。</p>
+<h3 id="HTTP协议详解"><a href="#HTTP协议详解" class="headerlink" title="HTTP协议详解"></a>HTTP协议详解</h3><p>HTTP协议目前最新版本是1.1，HTTP是一种无状态的协议。无状态是指web浏览器与web服务器之间不需要建立持久的链接，这意味着当一个客户端向服务器发出请求，然后web服务器返回响应(response)，连接就被关闭了，在服务器端不保留连接的有关信息。也就是说，HTTP请求只能由客户端发起，而服务器不能主动向客户端发送数据。 </p>
+<p>HTTP遵循请求(request)/应答(response)模型，web浏览器向web服务器发送请求时，web服务器处理请求并返回适当的应答。</p>
+<p><img src="https://xsbxx-picture.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220826180213817.png" alt="image-20220826180213817"></p>
+<h4 id="HTTP请求与响应"><a href="#HTTP请求与响应" class="headerlink" title="HTTP请求与响应"></a>HTTP请求与响应</h4><p>1.HTTP请求</p>
+<p>HTTP请求包括三部分，分别为请求行(请求方法)、请求头(消息报头)和请求正文。下面是一个经典的HTTP请求。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">POST /login.php HTTP/1.1	  //请求行</span><br><span class="line"><span class="attribute">HOST</span><span class="punctuation">: </span>www.xxx.com			  //请求头</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0</span><br><span class="line">							  //空白行，代表请求头结束</span><br><span class="line">Username=admin&amp;password=admin //请求正文							</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<p>HTTP请求的第一行即为请求行，由三部分组成，该行的第一部分说明该请求为<strong>POST请求</strong>；第二部分是一个斜杠(/login.php)，用来说明请求的是该域名根目录下的<strong>login.php</strong>；最后一部分说明使用的是<strong>HTTP1.1版本</strong>。</p>
+<p>第二行至空白行为HTTP中的请求头(消息头)。其中，HOST代表<strong>请求的主机地址</strong>，User-Agent代表<strong>浏览器的标识</strong>。请求头由<strong>客户端</strong>自行设定。</p>
+<p>HTTP请求的最后一行为请求正文，请求正文是可选的，它最常出现在POST请求方法中。</p>
+<p>2.HTTP响应</p>
+<p>与HTTP请求对应的是HTTP响应，HTTP响应也由三部分组成，它们分别是响应行、响应头(消息报头)和响应正文(消息主题)。下面是一个经典的HTTP响应。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">200</span> OK	//响应行</span><br><span class="line"><span class="attribute">Date</span><span class="punctuation">: </span>Thu, 28 Feb 2013 07:36:47 GMT //响应头</span><br><span class="line"><span class="attribute">Server</span><span class="punctuation">: </span>BWS/1.0</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>4199</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>text/html;charset=utf-8</span><br><span class="line"><span class="attribute">Cache-Control</span><span class="punctuation">: </span>private</span><br><span class="line"><span class="attribute">Expires</span><span class="punctuation">: </span>Thu, 28 Feb 2013 07:36:47 GMT</span><br><span class="line"><span class="attribute">Content-Encoding</span><span class="punctuation">: </span>gzip</span><br><span class="line"><span class="attribute">Set-Cookie</span><span class="punctuation">: </span>H_PS_PSSID=2022_1438_1944_1788; path=/; domain=.xxx.com</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>Keep-Alive</span><br><span class="line">//空白行，代表响应头结束</span><br><span class="line">&lt;html&gt; //响应正文或叫消息主题</span><br><span class="line">	&lt;head&gt;&lt;title&gt; Index.html &lt;/title&gt;&lt;/head&gt;</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
+
+<p>HTTP响应的第一行为响应行，其中有<strong>HTTP版本</strong>(HTTP/1.1)、<strong>状态码</strong>(200)以及<strong>消息</strong>“OK”。</p>
+<p>第二行至末尾的空白行为响应头，由<strong>服务器</strong>向<strong>客户端</strong>发送。</p>
+<p>消息报头之后是响应正文，是<strong>服务器</strong>向<strong>客户端</strong>发送的HTML数据。</p>
+<h4 id="HTTP请求方法"><a href="#HTTP请求方法" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h4><p>1.<strong>GET</strong></p>
+<p>GET方法用于<strong>获取请求页面的指定信息</strong>(以实体的格式)。如果请求资源为动态脚本(非HTML)，那么返回文本是Web容器解析后的HTML源代码，而不是源文件。例如请求index.jsp，返回的不是index.jsp的源文件，而是经过解析后的HTML代码。</p>
+<p>如下HTTP请求：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/index.php?id=1</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">HOST</span><span class="punctuation">: </span>www.xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>使用GET请求index.php，并且id参数为1，在服务器端脚本语言中可以选择性地接受这些参数，比如id=1&amp;name=admin，一般由开发者<strong>内定好的参数项目才会接收</strong>，比如开发者只接收id参数项目，若加了其他参数，如：<code>Index,php?id=1&amp;username=admin //多个参数项由&amp;分隔</code>服务器端脚本不会理会你加入的内容，依然只会接收id参数，并且去查询数据，最终向服务器端发送解析过的HTML数据，不会因为干扰而乱套。</p>
+<p>2.HEAD</p>
+<p>HEAD方法除了<strong>服务器不能在响应里返回消息主体</strong>外，其他都与GET方法相同。此方法经常被用来测试超文本链接的有效性、可访问性和最近的改变。 攻击者编写扫描工具时，就常用此方法，因为只测试资源是否存在，而不用返回消息主题，所以速度一定是最快的。一个经典的HTTP HEAD请求如下：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">HEAD</span> <span class="string">/index.php</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">HOST</span><span class="punctuation">: </span>www.xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>3.<strong>POST</strong></p>
+<p>POST方法也与GET方法相似，但最大的区别在于，GET方法没有请求内容，而POST是有请求内容的。POST请求最多用于<strong>向服务器发送大量的数据</strong>。GET虽然也能发送数据，但是有大小(长度)的限制，并且GET请求会将发送的数据显示在浏览器端，而POST则不会，所以安全性相对较高。</p>
+<p>例如，上传文件、提交留言等，只要是向服务器传输大量的数据，通常都会使用POST请求。一个经典的HTTP POST请求如下：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/login.php</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>www.xxx.com</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>26</span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line"><span class="attribute">Origin</span><span class="punctuation">: </span>http://home.2cto.com</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17 SE 2.X MetaSr 1.0</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/x-www-form-urlencoded</span><br><span class="line"><span class="attribute">Accept-Language</span><span class="punctuation">: </span>zh-CN,zh;q=0.8</span><br><span class="line"><span class="attribute">Accept-Charset</span><span class="punctuation">: </span>GBK,utf-8;q=0.7,*;q=0.3</span><br><span class="line"></span><br><span class="line"><span class="language-ini"><span class="attr">user</span>=admins&amp;pw=<span class="number">123456</span></span></span><br></pre></td></tr></table></figure>
+
+<p>用POST方法向服务器请求login.php，并且传递参数user=admins&amp;pw=123456。</p>
+<p>4.PUT</p>
+<p>PUT方法用于<strong>请求服务器把请求中的实体存储在请求资源下</strong>，如果请求资源已经在服务器中存在，那么将会用此请求中的数据替换原先的数据，作为指定资源的最新修改版。如果请求指定的资源不存在，将会创建这个资源，且数据位请求正文，请求如下：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PUT /input.txt</span><br><span class="line"><span class="attribute">HOST</span><span class="punctuation">: </span>www.xxx.com</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>6</span><br><span class="line"></span><br><span class="line">123456</span><br></pre></td></tr></table></figure>
+
+<p>这段HTTP PUT请求将会在主机根目录下创建input.txt，内容为123456。通常情况下，<strong>服务器都会关闭PUT方法</strong>，因为它会为服务器建立文件，属于危险的方法之一。</p>
+<p>5.DELETE</p>
+<p>DELETE方法用于<strong>请求源服务器删除请求的指定资源</strong>，<strong>服务器一般都会关闭此方法</strong>，因为客户端可以进行删除文件操作，属于危险的方法之一</p>
+<p>6.TRACE</p>
+<p>TRACE方法被用于<strong>激发一个远程的应用层的请求消息回路</strong>，也就是说，回显服务器收到的请求。TRACE方法允许客户端去了解数据被请求链的另一端接收的情况，并且利用哪些数据信息去测试或诊断。但此方法非常少见。</p>
+<p>7.CONNECT</p>
+<p>HTTP 1.1 协议规范保留了CONNECT方法，此方法是为了用于<strong>能动态切换到隧道的代理</strong>。</p>
+<p>8.OPTIONS</p>
+<p>OPTIONS方法是用于<strong>请求获得由URI标识的资源在请求/响应的通信过程中可以使用的功能选项</strong>。通过这个方法，客户端可以在采取具体资源请求之前，决定对该资源采取何种必要措施，或者了解服务器的性能。HTTP OPTIONS请求如下：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">OPTIONS</span> <span class="string">/</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">HOST</span><span class="punctuation">: </span>www.xxx.com</span><br><span class="line"></span><br><span class="line"><span class="language-http"><span class="meta">HTTP/1.1</span> <span class="number">200</span> OK</span></span><br><span class="line"><span class="language-http"><span class="attribute">Allow</span><span class="punctuation">: </span>OPTIONS, TRACE, GET, HEAD, POST</span></span><br><span class="line"><span class="language-http"><span class="attribute">Server</span><span class="punctuation">: </span>Microsoft-IIS/7.5</span></span><br><span class="line"><span class="language-http"><span class="attribute">Public</span><span class="punctuation">: </span>OPTIONS, TRACE, GET, HEAD, POST</span></span><br><span class="line"><span class="language-http"><span class="attribute">X-Powered-By</span><span class="punctuation">: </span>ASP.NET</span></span><br><span class="line"><span class="language-http"><span class="attribute">Date</span><span class="punctuation">: </span>Sun, 14 Jul 2013 15:50:58 GMT</span></span><br><span class="line"><span class="language-http"><span class="attribute">Content-Length</span><span class="punctuation">: </span>0</span></span><br></pre></td></tr></table></figure>
+
+<p>以上为HTTP/1.1标准方法，但HTTP中的请求方法还不止这些，例如WebDAV等。</p>
+<h4 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h4><p>当客户端发起HTTP请求，服务器端接收后，会向客户端发送响应信息，其中，HTTP响应中的第一行中，最重要的一点就是HTTP的响应码，如：<code>HTTP/1.1 200 OK</code></p>
+<p>此的状态码为200，在HTTP协议中表示请求成功。HTTP协议中的状态码由三位数字组成，第一位数字定义了响应的类别，且只有以下五种。</p>
+<p>1xx：信息提示，表示请求已被成功接收，继续处理其范围为100-101。</p>
+<p>2xx：成功，服务器成功地处理了请求。其范围为200-206。</p>
+<p>3xx：重定向，重定向状态码用于告诉浏览器客户端，它们访问的资源已被移动，并告诉客户端新的资源地址位置。此时，浏览器将重新对新资源发起请求。其范围为300-305。</p>
+<p>4xx：客户端错误状态码，有时客户端会发送一些服务器无法处理的东西，比如格式错误的请求，或者最常见的是，请求了一个不存在的URL。其范围为400-415。</p>
+<p>5xx：有时候客户端发送了一条有效请求，但Web服务器自身却出错了，可能是Web服务器运行出错了，或者网站都挂了。5xx就是用来描述服务器内部错误的，其范围为500-505。</p>
+<p>常见的状态码描述如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">200</td>
+<td>客户端请求成功，是最常见的状态</td>
+</tr>
+<tr>
+<td align="center">302</td>
+<td>重定向</td>
+</tr>
+<tr>
+<td align="center">404</td>
+<td>请求资源不存在，是最常见的状态</td>
+</tr>
+<tr>
+<td align="center">400</td>
+<td>客户端请求有语法错误，不被服务器所理解</td>
+</tr>
+<tr>
+<td align="center">401</td>
+<td>请求未经授权</td>
+</tr>
+<tr>
+<td align="center">403</td>
+<td>服务器收到请求，但是拒绝提供服务</td>
+</tr>
+<tr>
+<td align="center">500</td>
+<td>服务器内部错误，是最常见的状态</td>
+</tr>
+<tr>
+<td align="center">503</td>
+<td>服务器当前不能处理客户端的请求，一段时间后可能恢复正常</td>
+</tr>
+</tbody></table>
+<h4 id="HTTP消息"><a href="#HTTP消息" class="headerlink" title="HTTP消息"></a>HTTP消息</h4><p>HTTP消息又被称为HTTP头(HTTP header)，由四部分组成，分别是请求头、响应头、普通头和实体头。</p>
+<p>1.请求头</p>
+<p>请求头只出现在HTTP请求中，请求报文允许客户端向服务器端传递请求的附加信息和客户端自身的信息。常用的HTTP请求头如下。</p>
+<p>①Host：Host 请求报文域主要用于<strong>指定被请求资源的Internet主机和端口号</strong>，例如：HOST: <a target="_blank" rel="noopener" href="http://www.xxx.com:801/">www.xxx.com:801</a></p>
+<p>②User-Agent：User-Agent 请求报文域<strong>允许客户端将它的操作系统、浏览器和其他属性告诉服务器</strong>。登录一些网站时，很多时候都可以见到显示我们的浏览器、系统信息，这些都是此头的作用，例如：User-Agent: My privacy</p>
+<p>③Referer：Referer 包含有关URL，代表<strong>当前访问URL的上一个URL</strong>，也就是说，用户是从什么地方来到本页面。例如：Referer: <a target="_blank" rel="noopener" href="http://www.xxx.com/login.php%EF%BC%8C%E4%BB%A3%E8%A1%A8%E7%94%A8%E6%88%B7%E4%BB%8Elogin.oho%E6%9D%A5%E5%88%B0%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E3%80%82">www.xxx.com/login.php，代表用户从login.oho来到当前页面。</a></p>
+<p>④Cookie：Cookie 是非常重要的请求头，它是一段文本，常用来<strong>表示请求者身份</strong>等。</p>
+<p>⑤Range：Range 可以<strong>请求实体的部分内容</strong>，多线程下载一定会用到此请求头。例如：</p>
+<p>表示头500字节：bytes=0~499</p>
+<p>表示第二个500字节：bytes=500~999</p>
+<p>表示最后500字节：bytes=-500</p>
+<p>表示500字节以后的范围：bytes=500-</p>
+<p>⑥x-forward-for：x-forwar-for 即XFF头，它代表<strong>请求端的IP</strong>，可以有多个，中间以逗号隔开。</p>
+<p>⑦Accept：Accept 请求报头域用于<strong>指定客户端接受哪些MIME类型的信息</strong>，例如：Accept: text/html，表明客户端希望接收HTML文本。</p>
+<p>⑧Accept-Charset：Accept-Charset 请求报头域用于<strong>指定客户端接收的字符集</strong>，例如：Accept-Charset: iso-8859-1, gb2312。如果在请求消息中没有设置这个域，默认是任何字符集都可以接收。</p>
+<p>2.响应头</p>
+<p>响应头是服务器根据请求向客户端发送的HTTP头。常用的HTTP响应头如下。</p>
+<p>①Server：<strong>服务器所使用的Web服务器名称</strong>，例如：Server: Apache/1.3.6(Unix)，攻击者通过查看此头，可以探测Web服务器名称。所以，建议在服务器端修改此头的信息。</p>
+<p>②Set-Cookie：<strong>向客户端设置Cookie</strong>，通过查看此头，可以清楚地看到服务器向客户端发送的Cookie信息。</p>
+<p>③Last-Modified：服务器通过这个头告诉浏览器<strong>资源的最后修改时间</strong>。</p>
+<p>④Location：服务器通过这个头告诉浏览器<strong>去访问哪个页面</strong>，浏览器接收到这个请求之后，通常会立刻访问Location头所指向的页面。这个头通常配合302状态码使用。</p>
+<p>⑤Refresh：服务器通过Refresh头告诉浏览器<strong>定时刷新浏览器</strong>。</p>
+<p>3.普通头(了解)</p>
+<p>在普通报头中，有少数报头域用于<strong>所有的请求和响应消息</strong>，但并不用于被传输的实体，只用于传输的消息。例如：<strong>Date</strong>，表示消息产生的日期和时间。<strong>Connection</strong>，允许发送指定连接的选项。例如，指定连接是连续的，或者指定”close”选项，通知服务器，在响应完成后，关闭连接。<strong>Cache-Control</strong>，用于指定缓存指令，缓存指令是单向的，且是独立的。</p>
+<p>4.实体头</p>
+<p>请求和响应消息都可以传输一个实体头，实体头定义了关于实体正文和请求所标识的资源的元信息。元信息也就是实体内容的属性，包括实体信息类型、长度、压缩方法、最后一次修改时间等。常见的实体头如下。</p>
+<p>①Content-Type：Content-Type 实体头用于<strong>向接收方指示实体的介质类型</strong>。</p>
+<p>②Content-Encoding：Content-Encoding 头被用作<strong>媒体类型的修饰符</strong>，它的值指示了已经被应用到实体正文的附加内容的编码，因而要获得Content-Type报头域中所引用的媒体类型，必须采用相应的解码机制。</p>
+<p>③Content-Length：Content-Length 实体报头用于<strong>指明实体正文的长度</strong>，以字节方式存储的十进制数字来表示。</p>
+<p>④Last-Modified：Last-Modified 实体报头用于<strong>指示资源的最后修改日期和时间</strong>。</p>
+<h3 id="HTTP协议与HTTPS协议的区别"><a href="#HTTP协议与HTTPS协议的区别" class="headerlink" title="HTTP协议与HTTPS协议的区别"></a>HTTP协议与HTTPS协议的区别</h3><p>HTTPS 协议的全称为Hypertext Transfer Protocol over Secure Socket Layer，它是以安全为目的的HTTP通道，其实就是HTTP的升级版本，只是它比单纯的HTTP协议更加安全。</p>
+<p>HTTPS的安全基础是SSL，即在HTTP下加入SSL层。也就是HTTPS通过安全传输机制进行传输数据，这种机制可以保护网络传输的所有数据的隐秘性与完整性，可以降低非侵入性拦截攻击的可能性。</p>
+<p>既然是在HTTP的基础上进行构建的HTTPS协议，所以，无论怎么样，HTTP请求与响应都是以相同的方式进行工作的。</p>
+<p>HTTP协议与HTTPS协议的主要区别如下：</p>
+<p>1.HTTP是超文本传输协议，信息是明文传输，HTTPS则是具有安全性的SSL加密传输协议。</p>
+<p>2.HTTP与HTTPS协议使用的是完全不同的连接方式，HTTP采用80端口连接，而HTTPS则是443端口。</p>
+<p>3.HTTPS协议需要到ca申请证书，一般免费证书很少，需要交费，也有些Web容器提供，如TOMCAT。而HTTP协议却不需要。</p>
+<p>4.HTTP连接相对简单，是无状态的，而HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，相对来说，它要比HTTP协议更安全。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢你的支持！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/1656663577.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/mm_facetoface_collect_qrcode_1656663592150.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,285 +366,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/08/27/http%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/21/%E4%B8%80%E4%BA%9B%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E6%83%B3%E5%88%B0%E5%B0%B1%E8%A1%A5%E5%85%85%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2022-08-20T16:50:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/21/%E4%B8%80%E4%BA%9B%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E6%83%B3%E5%88%B0%E5%B0%B1%E8%A1%A5%E5%85%85%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一些杂七杂八想到就补充的知识点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/21/%E4%B8%80%E4%BA%9B%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E6%83%B3%E5%88%B0%E5%B0%B1%E8%A1%A5%E5%85%85%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/">一些杂七杂八想到就补充的知识点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">安全知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E8%A7%A3%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">HTTP协议解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82"><span class="toc-number">2.</span> <span class="toc-text">HTTP请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text">HTTP协议详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94"><span class="toc-number">3.1.</span> <span class="toc-text">HTTP请求与响应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">HTTP请求方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">3.3.</span> <span class="toc-text">HTTP状态码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP%E6%B6%88%E6%81%AF"><span class="toc-number">3.4.</span> <span class="toc-text">HTTP消息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTPS%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.</span> <span class="toc-text">HTTP协议与HTTPS协议的区别</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/17/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2022-08-17T09:12:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/17/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/">信息收集常用工具</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">安全知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/07/25/%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="archive-article-date">
-  	<time datetime="2022-07-25T09:05:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/07/25/%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3%E5%8F%B7/">常见端口号</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">安全知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/07/05/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2022-07-05T10:10:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/07/05/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Mysql基础知识</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/07/01/Windows%E5%92%8CLinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2022-07-01T09:27:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/07/01/Windows%E5%92%8CLinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Windows和Linux命令行常用命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">安全知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/07/01/PHP%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2022-07-01T09:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/07/01/PHP%E5%AD%A6%E4%B9%A0/">PHP学习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/06/15/Web%E6%BC%8F%E6%B4%9E/" class="archive-article-date">
-  	<time datetime="2022-06-15T10:20:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/15/Web%E6%BC%8F%E6%B4%9E/">Web漏洞</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -492,8 +501,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
